@@ -1,16 +1,267 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<style>
-		h1 {
-			color:#0f4c81;
-			font-family: Arial;
-			font-size: 48px;
-		}
-	</style>
-</head>
+export default function DentalClinicWebsite() {
+  return (
+    <div className="min-h-screen bg-white text-slate-800 font-sans">
+      {/* Header */}
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold tracking-tight">BrightSmile Dental</h1>
+            <p className="text-sm text-slate-500">Family & Cosmetic Dentistry</p>
+          </div>
 
-<body>
-	<h1>Seabreeze Dental Clinic</h1> 
-</body>
-</html>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="#services" className="hover:text-sky-700 transition">Services</a>
+            <a href="#about" className="hover:text-sky-700 transition">About</a>
+            <a href="#reviews" className="hover:text-sky-700 transition">Reviews</a>
+            <a href="#contact" className="hover:text-sky-700 transition">Contact</a>
+          </nav>
+
+          <button className="bg-sky-700 hover:bg-sky-800 text-white px-5 py-2.5 rounded-2xl shadow-sm transition">
+            Book Appointment
+          </button>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-sky-50">
+        <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-2 text-sm shadow-sm mb-6">
+              <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+              Accepting New Patients
+            </div>
+
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight text-slate-900">
+              Modern Dental Care for the Whole Family
+            </h2>
+
+            <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
+              Experience professional, comfortable, and personalized dental care with advanced technology and a welcoming environment.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <button className="bg-sky-700 hover:bg-sky-800 text-white px-6 py-3 rounded-2xl text-base shadow-md transition">
+                Schedule Online
+              </button>
+
+              <button className="border border-slate-300 hover:border-slate-400 px-6 py-3 rounded-2xl text-base bg-white transition">
+                Call (555) 123-4567
+              </button>
+            </div>
+
+            <div className="mt-10 flex items-center gap-10 text-sm text-slate-500">
+              <div>
+                <p className="text-2xl font-bold text-slate-900">15+</p>
+                <p>Years Experience</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-slate-900">5,000+</p>
+                <p>Happy Patients</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-slate-900">4.9★</p>
+                <p>Google Rating</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-0 bg-sky-200 blur-3xl opacity-30 rounded-full"></div>
+            <img
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop"
+              alt="Dental Clinic"
+              className="relative rounded-3xl shadow-2xl object-cover h-[600px] w-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-sky-700 font-semibold uppercase tracking-wider text-sm">
+              Our Services
+            </p>
+            <h3 className="mt-3 text-4xl font-bold tracking-tight text-slate-900">
+              Comprehensive Dental Treatments
+            </h3>
+            <p className="mt-5 text-slate-600 text-lg leading-relaxed">
+              From preventive care to cosmetic treatments, we provide everything your smile needs under one roof.
+            </p>
+          </div>
+
+          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: 'Routine Cleanings',
+                desc: 'Professional exams and preventive care to maintain healthy teeth and gums.'
+              },
+              {
+                title: 'Cosmetic Dentistry',
+                desc: 'Whitening, veneers, and smile makeovers tailored to your goals.'
+              },
+              {
+                title: 'Dental Implants',
+                desc: 'Permanent tooth replacement solutions with natural-looking results.'
+              },
+              {
+                title: 'Emergency Care',
+                desc: 'Fast and compassionate treatment for urgent dental needs.'
+              }
+            ].map((service) => (
+              <div
+                key={service.title}
+                className="bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mb-6">
+                  <div className="w-6 h-6 rounded-full border-2 border-sky-700"></div>
+                </div>
+                <h4 className="text-xl font-semibold text-slate-900">
+                  {service.title}
+                </h4>
+                <p className="mt-4 text-slate-600 leading-relaxed text-sm">
+                  {service.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+          <img
+            src="https://images.unsplash.com/photo-1588776814546-ec7e2c9d6f6b?q=80&w=1200&auto=format&fit=crop"
+            alt="Dentist"
+            className="rounded-3xl shadow-xl object-cover h-[500px] w-full"
+          />
+
+          <div>
+            <p className="text-sky-700 font-semibold uppercase tracking-wider text-sm">
+              About Our Clinic
+            </p>
+
+            <h3 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+              Personalized Care with Modern Technology
+            </h3>
+
+            <p className="mt-6 text-slate-600 leading-relaxed text-lg">
+              At BrightSmile Dental, our mission is to provide exceptional dental care in a calm and welcoming environment. We combine advanced dental technology with a patient-first approach to help you feel comfortable and confident.
+            </p>
+
+            <div className="mt-8 grid grid-cols-2 gap-6">
+              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <p className="text-3xl font-bold text-sky-700">98%</p>
+                <p className="mt-2 text-sm text-slate-500">Patient Satisfaction</p>
+              </div>
+
+              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <p className="text-3xl font-bold text-sky-700">Same-Day</p>
+                <p className="mt-2 text-sm text-slate-500">Emergency Appointments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section id="reviews" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <p className="text-sky-700 font-semibold uppercase tracking-wider text-sm">
+            Patient Reviews
+          </p>
+
+          <h3 className="mt-3 text-4xl font-bold tracking-tight text-slate-900">
+            Trusted by Families Across the Community
+          </h3>
+
+          <div className="mt-16 grid md:grid-cols-3 gap-8">
+            {[
+              'The office is beautiful and the staff made me feel comfortable from the moment I walked in.',
+              'Best dental experience I have ever had. Everything was modern, efficient, and professional.',
+              'Very clean clinic with caring dentists. Scheduling online was incredibly easy.'
+            ].map((review, index) => (
+              <div
+                key={index}
+                className="bg-slate-50 border border-slate-200 rounded-3xl p-8 text-left shadow-sm"
+              >
+                <div className="text-sky-700 text-xl mb-4">★★★★★</div>
+                <p className="text-slate-600 leading-relaxed">“{review}”</p>
+                <div className="mt-6">
+                  <p className="font-semibold text-slate-900">Patient {index + 1}</p>
+                  <p className="text-sm text-slate-500">Verified Review</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-sky-700 text-white">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h3 className="text-4xl font-bold tracking-tight leading-tight">
+            Ready to Schedule Your Visit?
+          </h3>
+
+          <p className="mt-5 text-sky-100 text-lg leading-relaxed max-w-2xl mx-auto">
+            Book your appointment today and experience high-quality dental care in a modern, welcoming clinic.
+          </p>
+
+          <button className="mt-10 bg-white text-sky-700 hover:bg-slate-100 px-8 py-4 rounded-2xl font-semibold shadow-lg transition">
+            Request Appointment
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer id="contact" className="bg-slate-900 text-slate-300 py-16">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+          <div>
+            <h4 className="text-xl font-bold text-white">BrightSmile Dental</h4>
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              Modern dentistry focused on comfort, quality, and long-term oral health.
+            </p>
+          </div>
+
+          <div>
+            <h5 className="font-semibold text-white mb-4">Services</h5>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li>Cleanings</li>
+              <li>Whitening</li>
+              <li>Implants</li>
+              <li>Emergency Care</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 className="font-semibold text-white mb-4">Office</h5>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li>123 Main Street</li>
+              <li>Your City, State</li>
+              <li>(555) 123-4567</li>
+              <li>info@brightsmile.com</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 className="font-semibold text-white mb-4">Hours</h5>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li>Mon–Thu: 8am–5pm</li>
+              <li>Friday: 8am–2pm</li>
+              <li>Saturday: Closed</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-slate-800 mt-12 pt-8 text-center text-sm text-slate-500">
+          © 2026 BrightSmile Dental. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  )
+}
+
