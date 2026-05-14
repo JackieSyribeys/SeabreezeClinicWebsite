@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Seabreeze Dental Clinic</title>
 
 <style>
+
+/* ===== GENERAL ===== */
 
 * {
   margin: 0;
@@ -13,14 +17,16 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #374151;
-  background: #ffffff;
-  line-height: 1.6;
+html {
+  scroll-behavior: smooth;
 }
 
-/* ===== Layout ===== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: white;
+  color: #374151;
+  line-height: 1.6;
+}
 
 .container {
   max-width: 1250px;
@@ -32,12 +38,12 @@ section {
   padding: 100px 0;
 }
 
-/* ===== Header ===== */
+/* ===== HEADER ===== */
 
 header {
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #e5e7eb;
   z-index: 100;
@@ -45,42 +51,60 @@ header {
 
 .header-inner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  padding: 35px 0;
+  padding: 18px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .logo img {
-  width: 160px;
-  height: auto;
-  margin-bottom: 18px;
-  border-radius: 20px;
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 14px;
 }
 
-.logo h1 {
-  font-size: 110px;
-  font-weight: 400;
+.logo-text h1 {
+  font-size: 28px;
+  font-weight: 600;
   color: #1d4ed8;
   line-height: 1;
-  letter-spacing: -2px;
-  text-align: center;
 }
 
-.logo p {
-  font-size: 18px;
+.logo-text p {
+  font-size: 13px;
   color: #6b7280;
-  margin-top: 10px;
-  letter-spacing: 1px;
-  text-align: center;
 }
 
-/* ===== Hero ===== */
+nav {
+  display: flex;
+  gap: 35px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+nav a:hover {
+  color: #1d4ed8;
+}
+
+/* ===== HERO ===== */
 
 .hero {
   background:
     linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
     url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1600&auto=format&fit=crop");
+
   background-size: cover;
   background-position: center;
 }
@@ -93,33 +117,32 @@ header {
 }
 
 .hero h2 {
-  font-size: 62px;
-  font-weight: 400;
-  color: #374151;
+  font-size: 60px;
+  font-weight: 600;
   line-height: 1.1;
+  color: #374151;
   margin-bottom: 25px;
 }
 
 .hero p {
-  font-size: 21px;
-  color: #4b5563;
+  font-size: 20px;
+  color: #6b7280;
   margin-bottom: 35px;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .btn-outline {
   background: white;
   border: 1px solid #d1d5db;
-  padding: 16px 26px;
+  padding: 15px 24px;
   border-radius: 14px;
   cursor: pointer;
-  font-size: 17px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
   color: #374151;
   transition: 0.3s;
 }
@@ -134,7 +157,7 @@ header {
   box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
-/* ===== Stats ===== */
+/* ===== STATS ===== */
 
 .stats {
   display: flex;
@@ -145,15 +168,15 @@ header {
 .stat h3 {
   font-size: 32px;
   color: #1d4ed8;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .stat p {
-  font-size: 15px;
+  font-size: 14px;
   color: #6b7280;
 }
 
-/* ===== Section Titles ===== */
+/* ===== SECTION TITLES ===== */
 
 .section-title {
   text-align: center;
@@ -161,18 +184,17 @@ header {
 }
 
 .section-title h2 {
-  font-size: 54px;
-  font-weight: 400;
+  font-size: 50px;
   margin-bottom: 15px;
   color: #374151;
 }
 
 .section-title p {
-  color: #6b7280;
   font-size: 18px;
+  color: #6b7280;
 }
 
-/* ===== Services ===== */
+/* ===== SERVICES ===== */
 
 .grid {
   display: grid;
@@ -181,17 +203,16 @@ header {
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: white;
   border-radius: 24px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   transition: 0.35s;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
 }
 
 .card img {
@@ -206,17 +227,15 @@ header {
 
 .card h3 {
   font-size: 26px;
-  font-weight: 400;
   margin-bottom: 10px;
   color: #374151;
 }
 
 .card p {
   color: #6b7280;
-  font-size: 16px;
 }
 
-/* ===== About ===== */
+/* ===== ABOUT ===== */
 
 .about {
   background: #f8fafc;
@@ -231,13 +250,12 @@ header {
 
 .about img {
   width: 100%;
-  border-radius: 30px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
 .about h2 {
-  font-size: 54px;
-  font-weight: 400;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 
@@ -246,11 +264,7 @@ header {
   color: #6b7280;
 }
 
-/* ===== Gallery ===== */
-
-.gallery {
-  background: white;
-}
+/* ===== GALLERY ===== */
 
 .gallery-grid {
   display: grid;
@@ -270,24 +284,23 @@ header {
   transform: scale(1.02);
 }
 
-/* ===== Reviews ===== */
+/* ===== REVIEWS ===== */
 
 .review-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 24px;
 }
 
 .review-card {
   background: white;
-  border: 1px solid #e5e7eb;
   border-radius: 24px;
   padding: 35px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
 .stars {
-  color: #f4a261;
+  color: #f4b183;
   font-size: 22px;
   margin-bottom: 18px;
 }
@@ -307,18 +320,17 @@ header {
 }
 
 .cta h2 {
-  font-size: 58px;
-  font-weight: 400;
-  margin-bottom: 20px;
   color: white;
+  font-size: 54px;
+  margin-bottom: 18px;
 }
 
 .cta p {
-  font-size: 22px;
   color: rgba(255,255,255,0.92);
+  font-size: 22px;
 }
 
-/* ===== Footer ===== */
+/* ===== FOOTER ===== */
 
 footer {
   background: #374151;
@@ -326,10 +338,9 @@ footer {
   text-align: center;
   padding: 50px 20px;
   margin-top: 100px;
-  font-size: 17px;
 }
 
-/* ===== Responsive ===== */
+/* ===== MOBILE ===== */
 
 @media (max-width: 1000px) {
 
@@ -341,53 +352,63 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .stats {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .logo h1 {
-    font-size: 70px;
+  nav {
+    display: none;
   }
 
   .hero h2 {
-    font-size: 46px;
+    font-size: 42px;
   }
 
   .section-title h2,
   .about h2,
   .cta h2 {
-    font-size: 42px;
+    font-size: 38px;
   }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
+
 <header>
+
   <div class="container header-inner">
 
     <div class="logo">
 
-      <!-- SAVE YOUR FACEBOOK LOGO IMAGE
-           IN THE SAME PLACE AS THIS HTML FILE
-           THEN RENAME IT TO:
-           seabreeze-logo.png -->
+      <!-- Put your downloaded logo image
+           in the SAME folder as this file
+           and name it:
+           seabreeze-logo.jpg -->
 
-      <img src="logo.jpg" alt="Seabreeze Dental Logo">
+      <img src="seabreeze-logo.jpg" alt="Seabreeze Dental Logo">
 
-      <h1>Seabreeze Dental</h1>
-
-      <p>General Dentistry</p>
+      <div class="logo-text">
+        <h1>Seabreeze Dental</h1>
+        <p>General Dentistry</p>
+      </div>
 
     </div>
 
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
   </div>
+
 </header>
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 
 <section class="hero">
 
@@ -396,11 +417,11 @@ footer {
     <div>
 
       <h2>
-        Personalized Dental Care Tailored To Meet Your Needs
+        Personalized Dental Care Tailored To Your Smile
       </h2>
 
       <p>
-        Experience comfortable, modern dental care in a calm and welcoming environment focused on long-term oral health and confident smiles.
+        Experience gentle, modern dental care in a calm and welcoming environment focused on long-term oral health and beautiful smiles.
       </p>
 
       <div class="hero-buttons">
@@ -431,7 +452,7 @@ footer {
 
 </section>
 
-<!-- SERVICES -->
+<!-- ===== SERVICES ===== -->
 
 <section id="services">
 
@@ -445,39 +466,47 @@ footer {
     <div class="grid">
 
       <div class="card">
+
         <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
           <h3>Cleanings</h3>
           <p>Preventive care for healthy teeth and gums.</p>
         </div>
+
       </div>
 
       <div class="card">
+
         <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
           <h3>Whitening</h3>
           <p>Brighten your smile safely and effectively.</p>
         </div>
+
       </div>
 
       <div class="card">
+
         <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
           <h3>Implants</h3>
           <p>Permanent natural-looking replacements.</p>
         </div>
+
       </div>
 
       <div class="card">
+
         <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?q=80&w=1200&auto=format&fit=crop">
 
         <div class="card-content">
           <h3>Emergency Care</h3>
           <p>Fast care when you need it most.</p>
         </div>
+
       </div>
 
     </div>
@@ -486,7 +515,7 @@ footer {
 
 </section>
 
-<!-- ABOUT -->
+<!-- ===== ABOUT ===== -->
 
 <section id="about" class="about">
 
@@ -499,7 +528,7 @@ footer {
       <h2>About Our Clinic</h2>
 
       <p>
-        We combine advanced dental technology with a patient-first approach to create a calm, welcoming experience for every patient who walks through our doors.
+        We combine advanced dental technology with a patient-first approach to create a comfortable and welcoming experience for every patient who visits our office.
       </p>
 
     </div>
@@ -508,15 +537,15 @@ footer {
 
 </section>
 
-<!-- GALLERY -->
+<!-- ===== GALLERY ===== -->
 
-<section class="gallery">
+<section id="gallery">
 
   <div class="container">
 
     <div class="section-title">
       <h2>Inside Our Office</h2>
-      <p>Modern, comfortable, and designed around patient care</p>
+      <p>Modern spaces designed around patient comfort</p>
     </div>
 
     <div class="gallery-grid">
@@ -533,7 +562,7 @@ footer {
 
 </section>
 
-<!-- REVIEWS -->
+<!-- ===== REVIEWS ===== -->
 
 <section id="reviews">
 
@@ -548,26 +577,27 @@ footer {
 
       <div class="review-card">
         <div class="stars">★★★★★</div>
-
-        <p>
-          “Best dental experience I’ve ever had. Everyone was welcoming and professional.”
-        </p>
+        <p>“I commend all of the staff for their professionalism. Dr. Syribeys explained his findings with great detail so that I could make wise decisions. The procedure was performed with exemplary care and skill. I am so very blessed to have this high level of expertise and treatment”</p>
       </div>
 
       <div class="review-card">
         <div class="stars">★★★★★</div>
-
-        <p>
-          “The office is beautiful, modern, and very clean. Highly recommend.”
-        </p>
+        <p>“I've been going to Dr. Syribeys for over 20 years. He is extremely knowledgeable and very caring about his patients. His staff is very friendly and helpful. In addition to my dental work, I have also been getting botox injections for the last 3 years. He is very meticulous with the injections and makes sure there is no bruising at the injection site. I recommend him to all of my family and friends.”</p>
       </div>
 
       <div class="review-card">
         <div class="stars">★★★★★</div>
+        <p>“I've gone to Dr. Syribeys for 20+ years, he's fabulous, and the practice is state of the art! My experiences have all been positive. I highly recommend both Dr. Syribeys and his practice.”</p>
+      </div>
 
-        <p>
-          “Very gentle care and an amazing staff. Scheduling was easy and stress-free.”
-        </p>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Review text 4 goes here...”</p>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Review text 5 goes here...”</p>
       </div>
 
     </div>
@@ -576,13 +606,15 @@ footer {
 
 </section>
 
-<!-- CTA -->
+<!-- ===== CTA ===== -->
 
 <section class="cta">
 
   <div class="container">
 
-    <h2>Ready To Schedule Your Visit?</h2>
+    <h2>
+      Ready To Schedule Your Visit?
+    </h2>
 
     <p>
       Call our office today at (555) 123-4567
@@ -592,7 +624,9 @@ footer {
 
 </section>
 
-<footer>
+<!-- ===== FOOTER ===== -->
+
+<footer id="contact">
 
   <p>
     © 2026 Seabreeze Dental. All rights reserved.
