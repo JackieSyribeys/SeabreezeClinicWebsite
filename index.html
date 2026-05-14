@@ -6,288 +6,361 @@
 <title>Seabreeze Dental Clinic</title>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #374151;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+
+.container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* ===== Header ===== */
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 35px 0;
+}
+
+.logo img {
+  width: 160px;
+  height: auto;
+  margin-bottom: 18px;
+  border-radius: 20px;
+}
+
+.logo h1 {
+  font-size: 110px;
+  font-weight: 400;
+  color: #1d4ed8;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.logo p {
+  font-size: 18px;
+  color: #6b7280;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* ===== Hero ===== */
+
+.hero {
+  background:
+    linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+    url("https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: 62px;
+  font-weight: 400;
+  color: #374151;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 21px;
+  color: #4b5563;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #d1d5db;
+  padding: 16px 26px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #374151;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #f3f4f6;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* ===== Stats ===== */
+
+.stats {
+  display: flex;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.stat h3 {
+  font-size: 32px;
+  color: #1d4ed8;
+  font-weight: 400;
+}
+
+.stat p {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* ===== Section Titles ===== */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-title h2 {
+  font-size: 54px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #374151;
+}
+
+.section-title p {
+  color: #6b7280;
+  font-size: 18px;
+}
+
+/* ===== Services ===== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: 0.35s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card h3 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.card p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* ===== About ===== */
+
+.about {
+  background: #f8fafc;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.about h2 {
+  font-size: 54px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 20px;
+  color: #6b7280;
+}
+
+/* ===== Gallery ===== */
+
+.gallery {
+  background: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== Reviews ===== */
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.review-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.stars {
+  color: #f4a261;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.review-card p {
+  color: #6b7280;
+  font-size: 17px;
+}
+
+/* ===== CTA ===== */
+
+.cta {
+  background: #f4b183;
+  border-radius: 30px;
+  margin: 40px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 58px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cta p {
+  font-size: 22px;
+  color: rgba(255,255,255,0.92);
+}
+
+/* ===== Footer ===== */
+
+footer {
+  background: #374151;
+  color: #d1d5db;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 100px;
+  font-size: 17px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 1000px) {
+
+  .hero-grid,
+  .about-grid,
+  .grid,
+  .gallery-grid,
+  .review-grid {
+    grid-template-columns: 1fr;
   }
 
-  body {
-    font-family: Arial, sans-serif;
-    color: #0f172a;
-    background: #ffffff;
-  }
-
-  /* ===== Layout ===== */
-  .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
-  }
-
-  section {
-    padding: 80px 0;
-  }
-
-  /* ===== Header ===== */
-  header {
-    position: sticky;
-    top: 0;
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e2e8f0;
-    z-index: 50;
-  }
-
-  .header-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
+  .stats {
     flex-direction: column;
+    gap: 20px;
   }
 
   .logo h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 110px;
-  font-weight: 700;
-  color: #0369a1;
-  line-height: 1;
-}
-
-  .logo p {
-    font-size: 16px;
-    color: #64748b;
-    margin-top: 8px;
-  }
-
-  nav a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #334155;
-    font-weight: 500;
-    font-size: 14px;
-  }
-
-  nav a:hover {
-    color: #0369a1;
-  }
-
-  .btn {
-    background: #0369a1;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: 600;
-  }
-
-  .btn:hover {
-    background: #075985;
-  }
-
-  /* ===== Hero ===== */
-  .hero {
-    background: linear-gradient(135deg, #f1f5f9, #e0f2fe);
-  }
-
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-
-  .badge {
-    display: inline-block;
-    background: white;
-    border: 1px solid #e2e8f0;
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 12px;
-    color: #10b981;
-    margin-bottom: 20px;
+    font-size: 70px;
   }
 
   .hero h2 {
-    font-size: 44px;
-    line-height: 1.1;
-    margin-bottom: 18px;
+    font-size: 46px;
   }
 
-  .hero p {
-    color: #475569;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 25px;
+  .section-title h2,
+  .about h2,
+  .cta h2 {
+    font-size: 42px;
   }
-
-  .hero-buttons {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .btn-outline {
-    background: white;
-    border: 1px solid #cbd5e1;
-    padding: 10px 16px;
-    border-radius: 12px;
-    cursor: pointer;
-  }
-
-  .hero img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-  }
-
-  /* ===== Stats ===== */
-  .stats {
-    display: flex;
-    gap: 40px;
-    margin-top: 30px;
-  }
-
-  .stat h3 {
-    font-size: 24px;
-    font-weight: 800;
-  }
-
-  .stat p {
-    font-size: 12px;
-    color: #64748b;
-  }
-
-  /* ===== Section Title ===== */
-  .section-title {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .section-title h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-
-  .section-title p {
-    color: #64748b;
-  }
-
-  /* ===== Cards ===== */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-
-  .card {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 25px;
-    border-radius: 18px;
-    transition: 0.3s;
-  }
-
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    background: white;
-  }
-
-  .card h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-
-  .card p {
-    font-size: 14px;
-    color: #64748b;
-    line-height: 1.5;
-  }
-
-  /* ===== About ===== */
-  .about {
-    background: #f8fafc;
-  }
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-
-  .about img {
-    width: 100%;
-    border-radius: 20px;
-  }
-
-  /* ===== Reviews ===== */
-  .review-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .stars {
-    color: #f59e0b;
-    margin-bottom: 10px;
-  }
-
-  /* ===== CTA ===== */
-  .cta {
-  background: #f97316; /* orange */
-  color: white;
-  text-align: center;
-  border-radius: 20px;
-  margin: 0 20px;
 }
 
-  .cta h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-  }
-
-  .cta p {
-    color: #e0f2fe;
-    margin-bottom: 20px;
-  }
-
-  .cta .btn {
-    background: white;
-    color: #0369a1;
-  }
-
-  /* ===== Footer ===== */
-  footer {
-    background: #0f172a;
-    color: #94a3b8;
-    padding: 50px 0;
-    margin-top: 80px;
-    text-align: center;
-  }
-
-  /* ===== Responsive ===== */
-  @media (max-width: 900px) {
-    .hero-grid,
-    .about-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .grid {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .review-grid {
-      grid-template-columns: 1fr;
-    }
-
-    nav {
-      display: none;
-    }
-  }
 </style>
 </head>
 
@@ -295,122 +368,236 @@
 
 <header>
   <div class="container header-inner">
+
     <div class="logo">
+
+      <!-- SAVE YOUR FACEBOOK LOGO IMAGE
+           IN THE SAME PLACE AS THIS HTML FILE
+           THEN RENAME IT TO:
+           seabreeze-logo.png -->
+
+      <img src="logo.jpg" alt="Seabreeze Dental Logo">
+
       <h1>Seabreeze Dental</h1>
+
       <p>General Dentistry</p>
+
     </div>
 
   </div>
 </header>
 
 <!-- HERO -->
+
 <section class="hero">
+
   <div class="container hero-grid">
 
     <div>
-      <div class="badge">Accepting New Patients</div>
 
-      <h2>Personalized Dental Care tailored to meet your needs.</h2>
+      <h2>
+        Personalized Dental Care Tailored To Meet Your Needs
+      </h2>
 
       <p>
-        Experience comfortable, high-quality dental care with modern technology and a gentle approach focused on your smile.
+        Experience comfortable, modern dental care in a calm and welcoming environment focused on long-term oral health and confident smiles.
       </p>
 
       <div class="hero-buttons">
-        <button class="btn-outline">Call (555) 123-4567</button>
+        <button class="btn-outline">
+          Call (555) 123-4567
+        </button>
       </div>
 
       <div class="stats">
+
         <div class="stat">
           <h3>15+</h3>
           <p>Years Experience</p>
         </div>
-        <div class="stat">
-          <h3>5K+</h3>
-          <p>Patients</p>
-        </div>
+
         <div class="stat">
           <h3>4.9★</h3>
-          <p>Rating</p>
+          <p>Patient Rating</p>
         </div>
+
       </div>
+
     </div>
 
-    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop"/>
+    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop">
+
   </div>
+
 </section>
 
 <!-- SERVICES -->
+
 <section id="services">
+
   <div class="container">
+
     <div class="section-title">
       <h2>Our Services</h2>
       <p>Complete dental care under one roof</p>
     </div>
 
     <div class="grid">
-      <div class="card"><h3>Cleanings</h3><p>Preventive care for healthy teeth and gums.</p></div>
-      <div class="card"><h3>Whitening</h3><p>Brighten your smile safely and effectively.</p></div>
-      <div class="card"><h3>Implants</h3><p>Permanent, natural-looking replacements.</p></div>
-      <div class="card"><h3>Emergency</h3><p>Fast care when you need it most.</p></div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Cleanings</h3>
+          <p>Preventive care for healthy teeth and gums.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Whitening</h3>
+          <p>Brighten your smile safely and effectively.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Implants</h3>
+          <p>Permanent natural-looking replacements.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Emergency Care</h3>
+          <p>Fast care when you need it most.</p>
+        </div>
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
 <!-- ABOUT -->
+
 <section id="about" class="about">
+
   <div class="container about-grid">
 
-    <img src="https://images.unsplash.com/photo-1588776814546-ec7e2c9d6f6b?q=80&w=1200&auto=format&fit=crop"/>
+    <img src="https://images.unsplash.com/photo-1588776814546-ec7e2c9d6f6b?q=80&w=1200&auto=format&fit=crop">
 
     <div>
+
       <h2>About Our Clinic</h2>
-      <p style="margin-top:15px;color:#64748b;line-height:1.6">
-        We combine advanced dental technology with a patient-first approach to make every visit comfortable, calm, and effective.
+
+      <p>
+        We combine advanced dental technology with a patient-first approach to create a calm, welcoming experience for every patient who walks through our doors.
       </p>
+
     </div>
 
   </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Inside Our Office</h2>
+      <p>Modern, comfortable, and designed around patient care</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+  </div>
+
 </section>
 
 <!-- REVIEWS -->
+
 <section id="reviews">
+
   <div class="container">
+
     <div class="section-title">
       <h2>Patient Reviews</h2>
-      <p>Trusted by families everywhere</p>
+      <p>Trusted by families throughout the community</p>
     </div>
 
     <div class="review-grid">
-      <div class="card">
+
+      <div class="review-card">
         <div class="stars">★★★★★</div>
-        “Best dental experience I’ve ever had.”
+
+        <p>
+          “Best dental experience I’ve ever had. Everyone was welcoming and professional.”
+        </p>
       </div>
 
-      <div class="card">
+      <div class="review-card">
         <div class="stars">★★★★★</div>
-        “Clean, modern, and very professional.”
+
+        <p>
+          “The office is beautiful, modern, and very clean. Highly recommend.”
+        </p>
       </div>
 
-      <div class="card">
+      <div class="review-card">
         <div class="stars">★★★★★</div>
-        “Highly recommend this clinic!”
+
+        <p>
+          “Very gentle care and an amazing staff. Scheduling was easy and stress-free.”
+        </p>
       </div>
+
     </div>
+
   </div>
+
 </section>
 
 <!-- CTA -->
+
 <section class="cta">
+
   <div class="container">
-    <h2>Ready to Schedule Your Visit?</h2>
-    <p>Book your appointment today and improve your smile.</p>
-    <p>Call our number: 123-456-7890</p>
+
+    <h2>Ready To Schedule Your Visit?</h2>
+
+    <p>
+      Call our office today at (555) 123-4567
+    </p>
+
   </div>
+
 </section>
 
-<footer id="contact">
-  <p>© 2026 Seabreeze Dental. All rights reserved.</p>
+<footer>
+
+  <p>
+    © 2026 Seabreeze Dental. All rights reserved.
+  </p>
+
 </footer>
 
 </body>
