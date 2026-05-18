@@ -102,14 +102,13 @@ nav a:hover {
     display: grid;
     grid-template-columns: 35% 65%;
 
-    min-height: 650px;
+    height: 450px;
 }
 
 .hero-image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
 .hero-text {
@@ -117,7 +116,7 @@ nav a:hover {
 
     color: white;
 
-    padding: 55px 50px;
+    padding: 30px 40px;
 
     display: flex;
     flex-direction: column;
