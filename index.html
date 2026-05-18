@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seabreeze Dental</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Seabreeze Dental Logo">
+
+            <div>
+                <h1>Seabreeze Dental</h1>
+                <p>General Dentistry</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+
+            <button class="contact-btn" onclick="openContactPanel()">
+                Contact
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-image">
+            <img src="images/dentist.jpg" alt="Dentist Portrait">
+        </div>
+
+        <div class="hero-text">
+
+            <h2>Philip John Syribeys, D.M.D.</h2>
+
+            <div class="orange-line"></div>
+
+            <p>
+                Dr. Syribeys is an Atlanta native. He attended Dekalb Christian Academy
+                and Lakeside High School located off Briarcliff road.
+            </p>
+
+            <p>
+                He graduated from the College of William and Mary with a B.S. degree in
+                Computer Science and Pre Medicine.
+            </p>
+
+            <p>
+                He earned his doctorate of dental medicine in 1999 from the Medical College
+                of Georgia.
+            </p>
+
+            <p>
+                Professional organizations include the Academy of General Dentistry,
+                The International Congress of Oral Implantologists,
+                and the North Metropolitan Atlanta Study Club.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OFFICE GALLERY ================= -->
+
+    <section class="gallery">
+
+        <img src="images/office1.jpg" alt="Office Photo">
+        <img src="images/office2.jpg" alt="Office Photo">
+        <img src="images/office3.jpg" alt="Office Photo">
+        <img src="images/office4.jpg" alt="Office Photo">
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="services-section">
+
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="icon-circle">🦷</div>
+
+                <h3>Surgical</h3>
+
+                <ul>
+                    <li>Root canals</li>
+                    <li>Extractions</li>
+                    <li>Implants</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon-circle">✨</div>
+
+                <h3>Restorative</h3>
+
+                <ul>
+                    <li>Crowns</li>
+                    <li>Bridges</li>
+                    <li>Fillings</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon-circle">😁</div>
+
+                <h3>Orthodontics</h3>
+
+                <ul>
+                    <li>Clear aligners</li>
+                    <li>Braces</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon-circle">🛡️</div>
+
+                <h3>Additional</h3>
+
+                <ul>
+                    <li>Hygiene appointments</li>
+                    <li>Occlusal guards</li>
+                    <li>Botox</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REVIEWS ================= -->
+
+    <section id="reviews" class="reviews-section">
+
+        <h2 class="section-title">Reviews</h2>
+
+        <div class="review-container">
+
+            <button class="arrow left" onclick="previousReview()">❮</button>
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p id="review-text">
+                    Dr Syribeys is an amazing Dentist. I have been going to him for over
+                    11 years and would never consider going anywhere else.
+                </p>
+
+            </div>
+
+            <button class="arrow right" onclick="nextReview()">❯</button>
+
+        </div>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="footer-contact">
+
+        <p>
+            <strong>Seabreeze Dental</strong>
+            &nbsp; | &nbsp;
+            (404) 555-5555
+            &nbsp; | &nbsp;
+            123 Example Road, Atlanta GA
+        </p>
+
+    </section>
+
+
+    <!-- ================= CONTACT PANEL ================= -->
+
+    <div class="overlay" id="overlay" onclick="closeContactPanel()"></div>
+
+    <div class="contact-panel" id="contactPanel">
+
+        <button class="close-btn" onclick="closeContactPanel()">×</button>
+
+        <h2>Contact Us</h2>
+
+        <div class="panel-line"></div>
+
+        <div class="contact-info-block">
+
+            <h3>Phone</h3>
+            <p>(404) 555-5555</p>
+
+        </div>
+
+        <div class="contact-info-block">
+
+            <h3>Address</h3>
+
+            <p>
+                123 Example Road<br>
+                Atlanta, GA 30300
+            </p>
+
+        </div>
+
+        <div class="contact-info-block">
+
+            <h3>Hours</h3>
+
+            <p>
+                Monday – Thursday: 8AM – 5PM<br>
+                Friday: 8AM – 1PM
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
