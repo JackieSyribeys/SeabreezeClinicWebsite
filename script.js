@@ -1,3 +1,4 @@
+console.log("JS LOADED");
 const reviews = [
 
     "Dr Syribeys is an amazing Dentist. I have been going to him for over 11 years and would never consider going anywhere else. He is professional, kind and an artist with making my partial fit perfect.",
