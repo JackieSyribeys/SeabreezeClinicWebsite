@@ -19,7 +19,7 @@ img {
 
 header {
     width: 100%;
-    padding: 24px 7%;
+    padding: 24px 4%;
 
     display: flex;
     justify-content: space-between;
@@ -42,7 +42,7 @@ header {
 }
 
 .logo-area img {
-    width: 90px;
+    width: 105px;
 }
 
 .logo-area h1 {
@@ -123,7 +123,7 @@ nav a:hover {
 }
 
 .hero-text h2 {
-    font-size: 3rem;
+    font-size: 2.6rem;
     margin-bottom: 20px;
 
     font-family: 'Cormorant Garamond', serif;
@@ -139,7 +139,7 @@ nav a:hover {
 }
 
 .hero-text p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 20px;
 
@@ -348,3 +348,40 @@ nav a:hover {
 }
 
 .contact-grid h3
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 2000;
+}
+
+.contact-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background: white;
+    padding: 40px;
+
+    transform: translateX(100%);
+    transition: 0.3s ease;
+
+    z-index: 3000;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-panel.active {
+    transform: translateX(0);
+}
