@@ -302,7 +302,7 @@ nav a:hover {
 }
 
 .arrow:hover {
-    transform: scale((1.2);
+    transform: scale(1.2);
 }
 
 .dots {
@@ -369,6 +369,8 @@ nav a:hover {
     height: 100vh;
     background: white;
     padding: 40px;
+    display: block;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.15);
 
     transform: translateX(100%);
     transition: 0.3s ease;
