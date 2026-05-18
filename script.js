@@ -40,8 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 7000);
 
     window.openContactPanel = function () {
-        document.getElementById("contactPanel").classList.add("active");
-        document.getElementById("overlay").classList.add("active");
+        alert("BUTTON CLICKED");
     };
 
     window.closeContactPanel = function () {
