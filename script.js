@@ -48,5 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("contactPanel").classList.remove("active");
         document.getElementById("overlay").classList.remove("active");
     };
+    
+    const contactBtn = document.getElementById("contactBtn");
+    if (contactBtn) {
+        contactBtn.addEventListener("click", openContactPanel);
+    }
 
 });
