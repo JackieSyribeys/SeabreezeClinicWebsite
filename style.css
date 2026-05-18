@@ -19,7 +19,7 @@ img {
 
 header {
     width: 100%;
-    padding: 24px 4%;
+    padding: 24px 2%;
 
     display: flex;
     justify-content: space-between;
@@ -42,7 +42,7 @@ header {
 }
 
 .logo-area img {
-    width: 105px;
+    width: 120px;
 }
 
 .logo-area h1 {
