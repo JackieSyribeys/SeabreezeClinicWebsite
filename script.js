@@ -53,17 +53,11 @@ const contactPanel = document.getElementById("contactPanel");
 const overlay = document.getElementById("overlay");
 
 function openContactPanel() {
-
-    contactPanel.classList.add("active");
-    overlay.classList.add("active");
-
-    document.body.style.overflow = "hidden";
+    document.getElementById("contactPanel").classList.add("active");
+    document.getElementById("overlay").classList.add("active");
 }
 
 function closeContactPanel() {
-
-    contactPanel.classList.remove("active");
-    overlay.classList.remove("active");
-
-    document.body.style.overflow = "auto";
+    document.getElementById("contactPanel").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
 }
