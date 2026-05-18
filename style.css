@@ -107,7 +107,9 @@ nav a:hover {
 
 .hero-image img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
+    max-height: 520px;
 }
 
 .hero-text {
@@ -115,7 +117,7 @@ nav a:hover {
 
     color: white;
 
-    padding: 80px 70px;
+    padding: 55px 50px;
 
     display: flex;
     flex-direction: column;
