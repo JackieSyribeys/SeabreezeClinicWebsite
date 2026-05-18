@@ -100,7 +100,7 @@ nav a:hover {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 35% 65%;
 
     min-height: 650px;
 }
@@ -109,7 +109,7 @@ nav a:hover {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    max-height: 520px;
+    object-position: center;
 }
 
 .hero-text {
