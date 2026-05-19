@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Dentist | Seabreeze Dental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Seabreeze Dental Logo">
+            <div>
+                <h1>Seabreeze Dental</h1>
+                <p>General Dentistry</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <button class="dropbtn">Services ▾</button>
+                <div class="dropdown-content">
+                    <a href="services-surgical.html">Surgical</a>
+                    <a href="services-restorative.html">Restorative</a>
+                    <a href="services-orthodontics.html">Orthodontics</a>
+                    <a href="services-additional.html">Additional Services</a>
+                </div>
+            </div>
+            <a href="index.html#reviews">Reviews</a>
+            <button class="contact-btn" id="contactBtn">Contact</button>
+        </nav>
+    </header>
+
+    <!-- ================= ABOUT DENTIST HERO ================= -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="images/dentist.png" alt="Dr. Philip John Syribeys Portrait">
+        </div>
+        <div class="hero-text">
+            <h2>Philip John Syribeys, D.M.D.</h2>
+            <div class="orange-line"></div>
+            <p>Dr. Syribeys is an Atlanta native. He attended Dekalb Christian Academy and Lakeside High School located off Briarcliff road.</p>
+            <p>He graduated from the College of William and Mary with a B.S. degree in Computer Science and Pre Medicine.</p>
+            <p>He earned his doctorate of dental medicine in 1999 from the Medical College of Georgia.</p>
+            <p>Professional organizations include the Academy of General Dentistry, The International Congress of Oral Implantologists, and the North Metropolitan Atlanta Study Club.</p>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT PANEL ================= -->
+    <div class="overlay" id="overlay" onclick="closeContactPanel()"></div>
+    <div class="contact-panel" id="contactPanel">
+        <button class="close-btn" onclick="closeContactPanel()">×</button>
+        <h2>Contact Us</h2>
+        <div class="panel-line"></div>
+        <div class="contact-info-block">
+            <h3>Phone</h3>
+            <p>(404) 555-5555</p>
+        </div>
+        <div class="contact-info-block">
+            <h3>Address</h3>
+            <p>123 Example Road<br>Atlanta, GA 30300</p>
+        </div>
+        <div class="contact-info-block">
+            <h3>Hours</h3>
+            <p>Monday – Thursday: 8AM – 5PM<br>Friday: 8AM – 1PM</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
