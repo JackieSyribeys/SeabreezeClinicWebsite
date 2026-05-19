@@ -3,143 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seabreeze Dental | Home</title>
+    <title>Seabreeze Dental | Personalized Dental Care</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- ================= PREMIUM HEADER ================= -->
     <header>
         <div class="logo-area">
-            <img src="images/logo.png" alt="Seabreeze Dental Logo">
-            <div>
+            <img src="images/logo.png" alt="Seabreeze Dental Logo" class="brand-logo">
+            <div class="brand-titles">
                 <h1>Seabreeze Dental</h1>
-                <p>General Dentistry</p>
+                <p>General & Cosmetic Dentistry</p>
             </div>
         </div>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="index.html" class="nav-link active-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
             <div class="dropdown">
-                <button class="dropbtn">Services ▾</button>
+                <button class="dropbtn">Services <span class="chevron">▾</span></button>
                 <div class="dropdown-content">
-                    <a href="services-surgical.html">Surgical</a>
-                    <a href="services-restorative.html">Restorative</a>
+                    <a href="services-surgical.html">Surgical Care</a>
+                    <a href="services-restorative.html">Restorative Dentistry</a>
                     <a href="services-orthodontics.html">Orthodontics</a>
-                    <a href="services-additional.html">Additional Services</a>
+                    <a href="services-additional.html">Hygiene & Additional Care</a>
                 </div>
             </div>
-            <a href="#reviews">Reviews</a>
-            <button class="contact-btn" id="contactBtn">Contact</button>
+            <a href="#reviews" class="nav-link">Reviews</a>
+            <button class="contact-btn" id="contactBtn">Book Appointment</button>
         </nav>
     </header>
 
-    <!-- ================= HERO SECTION ================= -->
-    <section class="hero homepage-hero">
-        <div class="hero-text full-width-hero">
-            <h2>Welcome to Seabreeze Dental</h2>
-            <div class="orange-line"></div>
-            <p class="hero-blurb">
-                At Seabreeze Dental, we provide personalized dental care that is individually tailored for each patient. Our team is dedicated to delivering high-quality, gentle treatment in an environment built entirely around your comfort and long-term oral health.
+    <!-- ================= EDITORIAL HERO SECTION ================= -->
+    <section class="hero-landing">
+        <div class="hero-inner">
+            <span class="hero-badge">Welcome to Seabreeze Dental</span>
+            <h2>Personalized dental care, individually tailored for you.</h2>
+            <p>
+                At Seabreeze Dental, we believe exceptional healthcare is rooted in comfort, clarity, and precision. Our practice is dedicated to delivering high-end, gentle clinical treatments within an environment built entirely around your well-being.
             </p>
+            <div class="hero-actions">
+                <button class="cta-primary" onclick="openContactPanel()">Schedule Visit</button>
+            </div>
         </div>
     </section>
 
-    <!-- ================= OFFICE GALLERY ================= -->
-    <section class="gallery">
-        <img src="images/office1.png" alt="Seabreeze Dental Treatment Room">
-        <img src="images/office2.png" alt="Seabreeze Dental Waiting Area">
-        <img src="images/office3.png" alt="Seabreeze Dental Modern Equipment">
-    </section>
-
-    <!-- ================= SERVICES OVERVIEW ================= -->
-    <section id="services" class="services-section">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            
-            <div class="service-card" onclick="location.href='services-surgical.html';" style="cursor: pointer;">
-                <div class="icon-circle">🦷</div>
-                <h3>Surgical</h3>
-                <ul>
-                    <li>Root canals</li>
-                    <li>Extractions</li>
-                    <li>Implants</li>
-                </ul>
+    <!-- ================= ELEVATED OFFICE GALLERY ================= -->
+    <section class="gallery-showcase">
+        <div class="gallery-grid">
+            <div class="gallery-item img-large">
+                <img src="images/office1.png" alt="Seabreeze Dental Practice Room">
             </div>
-
-            <div class="service-card" onclick="location.href='services-restorative.html';" style="cursor: pointer;">
-                <div class="icon-circle">✨</div>
-                <h3>Restorative</h3>
-                <ul>
-                    <li>Crowns</li>
-                    <li>Bridges</li>
-                    <li>Fillings</li>
-                </ul>
+            <div class="gallery-item img-stacked-1">
+                <img src="images/office2.png" alt="Our Warm Welcoming Lounge">
             </div>
-
-            <div class="service-card" onclick="location.href='services-orthodontics.html';" style="cursor: pointer;">
-                <div class="icon-circle">😁</div>
-                <h3>Orthodontics</h3>
-                <ul>
-                    <li>Clear aligners</li>
-                    <li>Braces</li>
-                </ul>
+            <div class="gallery-item img-stacked-2">
+                <img src="images/office3.png" alt="State of the Art Dental Care technology">
             </div>
-
-            <div class="service-card" onclick="location.href='services-additional.html';" style="cursor: pointer;">
-                <div class="icon-circle">🛡️</div>
-                <h3>Additional</h3>
-                <ul>
-                    <li>Hygiene appointments</li>
-                    <li>Occlusal guards</li>
-                    <li>Botox</li>
-                </ul>
-            </div>
-
         </div>
     </section>
 
-    <!-- ================= REVIEWS ================= -->
+    <!-- ================= EDITORIAL REVIEWS SECTION ================= -->
     <section id="reviews" class="reviews-section">
-        <h2 class="section-title">Reviews</h2>
-        <div class="review-container">
-            <button class="arrow left" onclick="previousReview()">❮</button>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p id="review-text">
-                    Dr Syribeys is an amazing Dentist. I have been going to him for over 11 years and would never consider going anywhere else.
-                </p>
+        <div class="reviews-wrapper">
+            <span class="sub-heading">Patient Testimonials</span>
+            
+            <div class="review-slider-box">
+                <button class="slider-arrow prev" onclick="previousReview()">❮</button>
+                
+                <div class="review-card-content">
+                    <div class="rating-stars">★★★★★</div>
+                    <blockquote id="review-text">
+                        "Dr Syribeys is an amazing Dentist. I have been going to him for over 11 years and would never consider going anywhere else."
+                    </blockquote>
+                </div>
+                
+                <button class="slider-arrow next" onclick="nextReview()">❯</button>
             </div>
-            <button class="arrow right" onclick="nextReview()">❯</button>
-        </div>
-        <div class="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
     </section>
 
-    <!-- ================= CONTACT PANEL ================= -->
+    <!-- ================= DRAWER-STYLE CONTACT PANEL ================= -->
     <div class="overlay" id="overlay" onclick="closeContactPanel()"></div>
     <div class="contact-panel" id="contactPanel">
         <button class="close-btn" onclick="closeContactPanel()">×</button>
-        <h2>Contact Us</h2>
-        <div class="panel-line"></div>
-        <div class="contact-info-block">
-            <h3>Phone</h3>
-            <p>(404) 555-5555</p>
+        
+        <div class="panel-header">
+            <h2>Connect With Us</h2>
+            <p>We are currently accepting new patients.</p>
         </div>
-        <div class="contact-info-block">
-            <h3>Address</h3>
-            <p>123 Example Road<br>Atlanta, GA 30300</p>
-        </div>
-        <div class="contact-info-block">
-            <h3>Hours</h3>
-            <p>Monday – Thursday: 8AM – 5PM<br>Friday: 8AM – 1PM</p>
+
+        <div class="panel-body">
+            <div class="contact-meta-item">
+                <label>Direct Phone</label>
+                <p class="meta-value">(404) 555-5555</p>
+            </div>
+            
+            <div class="contact-meta-item">
+                <label>Clinic Address</label>
+                <p class="meta-value">123 Example Road<br>Atlanta, GA 30300</p>
+            </div>
+            
+            <div class="contact-meta-item">
+                <label>Practice Hours</label>
+                <p class="meta-value">
+                    <span>Mon – Thu:</span> 8:00 AM – 5:00 PM<br>
+                    <span>Friday:</span> 8:00 AM – 1:00 PM
+                </p>
+            </div>
         </div>
     </div>
 
