@@ -68,3 +68,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// ================= SCROLL REVEAL OBSERVER ENGINE =================
+document.addEventListener("DOMContentLoaded", function () {
+    const itemsToReveal = document.querySelectorAll(".reveal-left, .reveal-right");
+
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target); // Stops watching once animated to boost site performance
+            }
+        });
+    };
+
+    const revealOptions = {
+        root: null, // Default to browser viewport window
+        threshold: 0.15 // Triggers when 15% of the card is visible
+    };
+
+    const observer = new IntersectionObserver(revealCallback, revealOptions);
+
+    itemsToReveal.forEach(item => {
+        observer.observe(item);
+    });
+});
