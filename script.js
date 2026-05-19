@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM LOADED");
 
-    console.log("JS LOADED");
-
+    // ================= REVIEWS CAROUSEL DATA & ENGINE =================
     const reviews = [
         "Dr Syribeys is an amazing Dentist. I have been going to him for over 11 years and would never consider going anywhere else. He is professional, kind and an artist with making my partial fit perfect.",
         "The office is beautiful and the staff is incredibly friendly. Everything felt modern, clean, and welcoming from the moment I walked in.",
@@ -9,40 +9,32 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     let currentReview = 0;
-
     const reviewText = document.getElementById("review-text");
     const dots = document.querySelectorAll(".dot");
 
     function updateReview() {
-        // Only run if the elements are present on the current page (e.g., index.html)
         if (reviewText && dots.length > 0) {
             reviewText.textContent = reviews[currentReview];
-            dots.forEach(dot => {
-                dot.classList.remove("active");
-            });
+            dots.forEach(dot => dot.classList.remove("active"));
             dots[currentReview].classList.add("active");
         }
     }
 
     window.nextReview = function () {
-        currentReview++;
-        if (currentReview >= reviews.length) currentReview = 0;
+        currentReview = (currentReview + 1) % reviews.length;
         updateReview();
     };
 
     window.previousReview = function () {
-        currentReview--;
-        if (currentReview < 0) currentReview = reviews.length - 1;
+        currentReview = (currentReview - 1 + reviews.length) % reviews.length;
         updateReview();
     };
 
-    // Run review interval only if slider components exist
     if (reviewText && dots.length > 0) {
-        setInterval(() => {
-            nextReview();
-        }, 7000);
+        setInterval(nextReview, 7000);
     }
 
+    // ================= CONTACT SIDE PANEL ENGINE =================
     window.openContactPanel = function () {
         document.getElementById("contactPanel").classList.add("active");
         document.getElementById("overlay").classList.add("active");
@@ -58,4 +50,21 @@ document.addEventListener("DOMContentLoaded", function () {
         contactBtn.addEventListener("click", openContactPanel);
     }
 
+    // ================= BULLETPROOF DROPDOWN ENGINE =================
+    const dropBtn = document.querySelector(".dropbtn");
+    const dropdown = document.querySelector(".dropdown");
+
+    if (dropBtn) {
+        dropBtn.addEventListener("click", function (e) {
+            e.stopPropagation(); // Stop window click from instantly closing it
+            dropdown.classList.toggle("open");
+        });
+    }
+
+    // Close the services dropdown automatically if user clicks anywhere else outside of it
+    window.addEventListener("click", function () {
+        if (dropdown && dropdown.classList.contains("open")) {
+            dropdown.classList.remove("open");
+        }
+    });
 });
