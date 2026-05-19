@@ -764,6 +764,18 @@ nav a:hover {
     transform: translateX(0);
 }
 
+/* Reveal Up Animation */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(60px); /* Starts 60px lower than its natural position */
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0); /* Rises to its natural position */
+}
+
 /* Accessibility fallback: if a user disables system motion effects */
 @media (prefers-reduced-motion: reduce) {
     .reveal-left, .reveal-right {
