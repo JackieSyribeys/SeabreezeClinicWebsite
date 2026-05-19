@@ -317,3 +317,101 @@ nav a:hover {
     line-height: 1.6;
     color: #555;
 }
+/* ================= DROPDOWN FIXES & ACTIVE STATES ================= */
+.active-link {
+    color: #f08d35 !important;
+    font-weight: 500;
+}
+
+/* Modifying dropdown styles to read the JavaScript state engine seamlessly */
+.dropdown.open .dropdown-content {
+    display: block !important;
+}
+
+/* Fallback padding protection when cursor bridges down into menu link boxes */
+.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: transparent;
+}
+
+
+/* ================= REFINED DENTIST ABOUT PAGE STYLES ================= */
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 4%;
+    display: flex;
+    align-items: flex-start; /* Keeps items cleanly aligned at the top */
+    gap: 50px;
+}
+
+/* Smaller profile element setting image to roughly 1/3 layout space width */
+.dentist-photo-box {
+    flex: 0 0 350px; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.dentist-photo-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Faded blue box design for the biographical copy details */
+.dentist-bio-box {
+    flex: 1;
+    background-color: #e6f0f3; /* Faded blue box across the section */
+    padding: 50px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+/* Doctor name font configuration matched strictly to the logo typography colors */
+.dentist-bio-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: #0c6d84; /* Signature blue brand color */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.orange-line-short {
+    width: 50px;
+    height: 4px;
+    background: #f08d35;
+    margin-bottom: 25px;
+}
+
+/* Bio copy matching color assignment */
+.dentist-bio-box p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #0c6d84; /* Deep teal-blue typography */
+    margin-bottom: 20px;
+}
+
+.dentist-bio-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustment if screens become narrow */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dentist-photo-box {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 350px;
+    }
+}
