@@ -415,3 +415,85 @@ nav a:hover {
         max-width: 350px;
     }
 }
+/* ================= SURGICAL PAGE STRUCTURAL LAYOUTS ================= */
+.service-detail-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 60px auto 120px;
+    padding: 0 4%;
+}
+
+.service-page-title {
+    text-align: center;
+    font-size: 3.2rem;
+    color: #0c6d84;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.central-line {
+    width: 60px;
+    height: 4px;
+    background: #f08d35;
+    margin: 15px auto 50px;
+}
+
+.service-items-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* Horizontal line alignment layout */
+.detailed-service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+/* Perfect icon bounding parameters */
+.service-icon-container {
+    flex: 0 0 80px; 
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-page-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.service-text-block {
+    flex: 1;
+}
+
+.service-text-block h3 {
+    font-size: 1.6rem;
+    color: #0c6d84;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.service-text-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Mobile responsive collapse protection */
+@media (max-width: 600px) {
+    .detailed-service-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .service-icon-container {
+        margin-bottom: 10px;
+    }
+}
