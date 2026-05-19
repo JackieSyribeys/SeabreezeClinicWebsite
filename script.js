@@ -2,37 +2,63 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM LOADED");
 
     // ================= REVIEWS CAROUSEL DATA & ENGINE =================
-    const reviews = [
-        "Dr Syribeys is an amazing Dentist. I have been going to him for over 11 years and would never consider going anywhere else. He is professional, kind and an artist with making my partial fit perfect.",
-        "The office is beautiful and the staff is incredibly friendly. Everything felt modern, clean, and welcoming from the moment I walked in.",
-        "I was nervous about my procedure but the entire team made me feel comfortable. The results were amazing and completely natural looking."
-    ];
-
-    let currentReview = 0;
-    const reviewText = document.getElementById("review-text");
-    const dots = document.querySelectorAll(".dot");
-
-    function updateReview() {
-        if (reviewText && dots.length > 0) {
-            reviewText.textContent = reviews[currentReview];
-            dots.forEach(dot => dot.classList.remove("active"));
-            dots[currentReview].classList.add("active");
-        }
+// ================= HIGH-END EDITORIAL REVIEW CAROUSEL =================
+const reviewsList = [
+    {
+        text: "Dr. Syribeys is an amazing Dentist. I have been going to him for over 11 years and would never consider going anywhere else.",
+        author: "— Sarah J."
+    },
+    {
+        text: "The office environment is so modern and peaceful. The team took the time to explain everything thoroughly and kept me entirely at ease.",
+        author: "— Michael K."
+    },
+    {
+        text: "Incredible attention to detail. From routine cleanings to advanced dental work, they consistently deliver premier, comfortable care.",
+        author: "— Amanda L."
     }
+];
 
-    window.nextReview = function () {
-        currentReview = (currentReview + 1) % reviews.length;
-        updateReview();
-    };
+let activeReviewIndex = 0;
 
-    window.previousReview = function () {
-        currentReview = (currentReview - 1 + reviews.length) % reviews.length;
-        updateReview();
-    };
+function updateEditorialReview(newIndex) {
+    const textElement = document.getElementById("review-text");
+    const authorElement = document.getElementById("review-author");
+    const dots = document.querySelectorAll(".edit-dot");
 
-    if (reviewText && dots.length > 0) {
-        setInterval(nextReview, 7000);
-    }
+    // Start fade down animation transition
+    textElement.classList.add("review-fade-out");
+    authorElement.classList.add("review-fade-out");
+
+    setTimeout(() => {
+        // Swap content index markers precisely mid-fade
+        activeReviewIndex = newIndex;
+        textElement.textContent = reviewsList[activeReviewIndex].text;
+        authorElement.textContent = reviewsList[activeReviewIndex].author;
+
+        // Sync operational dot tracking loops
+        dots.forEach((dot, dotIdx) => {
+            if (dotIdx === activeReviewIndex) {
+                dot.classList.add("active");
+            } else {
+                dot.classList.remove("active");
+            }
+        });
+
+        // Lift elements back up clearly into native focus
+        textElement.classList.remove("review-fade-out");
+        authorElement.classList.remove("review-fade-out");
+    }, 300); // 300ms matches the transition timing exactly
+}
+
+function nextReview() {
+    let nextIndex = (activeReviewIndex + 1) % reviewsList.length;
+    updateEditorialReview(nextIndex);
+}
+
+function previousReview() {
+    let prevIndex = (activeReviewIndex - 1 + reviewsList.length) % reviewsList.length;
+    updateEditorialReview(prevIndex);
+}
 
     // ================= CONTACT SIDE PANEL ENGINE =================
     window.openContactPanel = function () {
