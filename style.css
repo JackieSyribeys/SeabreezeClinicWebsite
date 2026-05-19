@@ -669,3 +669,35 @@ nav a:hover {
         height: 300px;
     }
 }
+
+/* ================= INTERACTIVE SCROLL ANIMATIONS ================= */
+
+/* Initial state for items sliding from the left */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Initial state for items sliding from the right */
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* The active trigger state that glides them into center view */
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Accessibility fallback: if a user disables system motion effects */
+@media (prefers-reduced-motion: reduce) {
+    .reveal-left, .reveal-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
