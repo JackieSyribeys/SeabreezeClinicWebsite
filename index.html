@@ -102,29 +102,33 @@
     </section>
 
     <!-- ================= REVIEWS ================= -->
-    <section id="reviews" class="reviews-section">
-        <h2 class="section-title">Reviews</h2>
+<section id="reviews" class="editorial-reviews-section">
+    <span class="reviews-subtitle">Patient Testimonials</span>
+    
+    <div class="editorial-review-container">
+        <div class="decorative-quote-mark">“</div>
 
-        <div class="review-container">
-            <button class="arrow left" onclick="previousReview()">❮</button>
+        <div class="editorial-review-window">
+            <div class="stars-badge">★★★★★</div>
+            
+            <blockquote id="review-text" class="editorial-quote">
+                Dr. Syribeys is an amazing Dentist. I have been going to him for over 11 years and would never consider going anywhere else.
+            </blockquote>
+            
+            <cite id="review-author" class="editorial-author">— Sarah J.</cite>
+        </div>
 
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p id="review-text">
-                    Dr Syribeys is an amazing Dentist. I have been going to him for over
-                    11 years and would never consider going anywhere else.
-                </p>
+        <div class="editorial-nav-controls">
+            <button class="editorial-arrow left" onclick="previousReview()" aria-label="Previous Review">❮</button>
+            <div class="editorial-dots">
+                <span class="edit-dot active"></span>
+                <span class="edit-dot"></span>
+                <span class="edit-dot"></span>
             </div>
-
-            <button class="arrow right" onclick="nextReview()">❯</button>
+            <button class="editorial-arrow right" onclick="nextReview()" aria-label="Next Review">❯</button>
         </div>
-
-        <div class="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- ================= CONTACT PANEL ================= -->
     <div class="overlay" id="overlay" onclick="closeContactPanel()"></div>
