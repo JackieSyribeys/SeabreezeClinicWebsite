@@ -3,125 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seabreeze Dental | Personalized Dental Care</title>
-    
+    <title>Seabreeze Dental</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ================= PREMIUM HEADER ================= -->
+    <!-- ================= HEADER ================= -->
     <header>
         <div class="logo-area">
-            <img src="images/logo.png" alt="Seabreeze Dental Logo" class="brand-logo">
-            <div class="brand-titles">
+            <img src="images/logo.png" alt="Seabreeze Dental Logo">
+            <div>
                 <h1>Seabreeze Dental</h1>
-                <p>General & Cosmetic Dentistry</p>
+                <p>General Dentistry</p>
             </div>
         </div>
 
         <nav>
-            <a href="index.html" class="nav-link active-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
+            <a href="about.html">About</a>
+            
+            <!-- Hoverable Services Dropdown Menu -->
             <div class="dropdown">
-                <button class="dropbtn">Services <span class="chevron">▾</span></button>
+                <button class="dropbtn">Services</button>
                 <div class="dropdown-content">
-                    <a href="services-surgical.html">Surgical Care</a>
-                    <a href="services-restorative.html">Restorative Dentistry</a>
+                    <a href="services-surgical.html">Surgical</a>
+                    <a href="services-restorative.html">Restorative</a>
                     <a href="services-orthodontics.html">Orthodontics</a>
-                    <a href="services-additional.html">Hygiene & Additional Care</a>
+                    <a href="services-additional.html">Additional</a>
                 </div>
             </div>
-            <a href="#reviews" class="nav-link">Reviews</a>
-            <button class="contact-btn" id="contactBtn">Book Appointment</button>
+
+            <button class="contact-btn" id="contactBtn">
+                Contact
+            </button>
         </nav>
     </header>
 
-    <!-- ================= EDITORIAL HERO SECTION ================= -->
-    <section class="hero-landing">
-        <div class="hero-inner">
-            <span class="hero-badge">Welcome to Seabreeze Dental</span>
-            <h2>Personalized dental care, individually tailored for you.</h2>
-            <p>
-                At Seabreeze Dental, we believe exceptional healthcare is rooted in comfort, clarity, and precision. Our practice is dedicated to delivering high-end, gentle clinical treatments within an environment built entirely around your well-being.
-            </p>
-            <div class="hero-actions">
-                <button class="cta-primary" onclick="openContactPanel()">Schedule Visit</button>
-            </div>
-        </div>
+    <!-- ================= BLURB SECTION ================= -->
+    <section class="blurb-section">
+        <p>
+            At Seabreeze Dental we provide personalized dental care that is individually tailored for each patient. Our team is dedicated to delivering high-quality, gentle treatment in an environment built entirely around your comfort and long-term oral health.
+        </p>
     </section>
 
-    <!-- ================= ELEVATED OFFICE GALLERY ================= -->
-    <section class="gallery-showcase">
-        <div class="gallery-grid">
-            <div class="gallery-item img-large">
-                <img src="images/office1.png" alt="Seabreeze Dental Practice Room">
-            </div>
-            <div class="gallery-item img-stacked-1">
-                <img src="images/office2.png" alt="Our Warm Welcoming Lounge">
-            </div>
-            <div class="gallery-item img-stacked-2">
-                <img src="images/office3.png" alt="State of the Art Dental Care technology">
-            </div>
-        </div>
+    <!-- ================= OFFICE GALLERY ================= -->
+    <section class="gallery">
+        <img src="images/office1.png" alt="Office Photo">
+        <img src="images/office2.png" alt="Office Photo">
+        <img src="images/office3.png" alt="Office Photo">
     </section>
 
-    <!-- ================= EDITORIAL REVIEWS SECTION ================= -->
+    <!-- ================= REVIEWS ================= -->
     <section id="reviews" class="reviews-section">
-        <div class="reviews-wrapper">
-            <span class="sub-heading">Patient Testimonials</span>
-            
-            <div class="review-slider-box">
-                <button class="slider-arrow prev" onclick="previousReview()">❮</button>
-                
-                <div class="review-card-content">
-                    <div class="rating-stars">★★★★★</div>
-                    <blockquote id="review-text">
-                        "Dr Syribeys is an amazing Dentist. I have been going to him for over 11 years and would never consider going anywhere else."
-                    </blockquote>
-                </div>
-                
-                <button class="slider-arrow next" onclick="nextReview()">❯</button>
-            </div>
-            
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </section>
+        <h2 class="section-title">Reviews</h2>
 
-    <!-- ================= DRAWER-STYLE CONTACT PANEL ================= -->
-    <div class="overlay" id="overlay" onclick="closeContactPanel()"></div>
-    <div class="contact-panel" id="contactPanel">
-        <button class="close-btn" onclick="closeContactPanel()">×</button>
-        
-        <div class="panel-header">
-            <h2>Connect With Us</h2>
-            <p>We are currently accepting new patients.</p>
-        </div>
+        <div class="review-container">
+            <button class="arrow left" onclick="previousReview()">❮</button>
 
-        <div class="panel-body">
-            <div class="contact-meta-item">
-                <label>Direct Phone</label>
-                <p class="meta-value">(404) 555-5555</p>
-            </div>
-            
-            <div class="contact-meta-item">
-                <label>Clinic Address</label>
-                <p class="meta-value">123 Example Road<br>Atlanta, GA 30300</p>
-            </div>
-            
-            <div class="contact-meta-item">
-                <label>Practice Hours</label>
-                <p class="meta-value">
-                    <span>Mon – Thu:</span> 8:00 AM – 5:00 PM<br>
-                    <span>Friday:</span> 8:00 AM – 1:00 PM
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p id="review-text">
+                    Dr Syribeys is an amazing Dentist. I have been going to him for over
+                    11 years and would never consider going anywhere else.
                 </p>
             </div>
+
+            <button class="arrow right" onclick="nextReview()">❯</button>
+        </div>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT PANEL ================= -->
+    <div class="overlay" id="overlay" onclick="closeContactPanel()"></div>
+
+    <div class="contact-panel" id="contactPanel">
+        <button class="close-btn" onclick="closeContactPanel()">×</button>
+        <h2>Contact Us</h2>
+        <div class="panel-line"></div>
+
+        <div class="contact-info-block">
+            <h3>Phone</h3>
+            <p>(404) 555-5555</p>
+        </div>
+
+        <div class="contact-info-block">
+            <h3>Address</h3>
+            <p>
+                123 Example Road<br>
+                Atlanta, GA 30300
+            </p>
+        </div>
+
+        <div class="contact-info-block">
+            <h3>Hours</h3>
+            <p>
+                Monday – Thursday: 8AM – 5PM<br>
+                Friday: 8AM – 1PM
+            </p>
         </div>
     </div>
 
