@@ -14,13 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const dots = document.querySelectorAll(".dot");
 
     function updateReview() {
-        reviewText.textContent = reviews[currentReview];
-
-        dots.forEach(dot => {
-            dot.classList.remove("active");
-        });
-
-        dots[currentReview].classList.add("active");
+        // Only run if the elements are present on the current page (e.g., index.html)
+        if (reviewText && dots.length > 0) {
+            reviewText.textContent = reviews[currentReview];
+            dots.forEach(dot => {
+                dot.classList.remove("active");
+            });
+            dots[currentReview].classList.add("active");
+        }
     }
 
     window.nextReview = function () {
@@ -35,9 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
         updateReview();
     };
 
-    setInterval(() => {
-        nextReview();
-    }, 7000);
+    // Run review interval only if slider components exist
+    if (reviewText && dots.length > 0) {
+        setInterval(() => {
+            nextReview();
+        }, 7000);
+    }
 
     window.openContactPanel = function () {
         document.getElementById("contactPanel").classList.add("active");
