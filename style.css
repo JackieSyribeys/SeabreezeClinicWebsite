@@ -178,73 +178,144 @@ nav a:hover {
 }
 
 /* ================= REVIEWS (RESTORED STYLE) ================= */
-.reviews-section {
-    padding: 30px 7% 120px;
-}
-
-.section-title {
+/* ================= IDEA 3: MINIMALIST EDITORIAL REVIEWS ================= */
+.editorial-reviews-section {
+    background-color: #ffffff;
+    padding: 100px 4%;
     text-align: center;
-    font-size: 3.2rem;
-    color: #0c6d84;
-    margin-bottom: 60px;
-    font-family: 'Cormorant Garamond', serif;
+    position: relative;
+    overflow: hidden;
 }
 
-.review-container {
+.reviews-subtitle {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #f08d35;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.editorial-review-container {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Faded signature accent quote mark behind text */
+.decorative-quote-mark {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12rem;
+    color: rgba(12, 109, 132, 0.05); /* Faded teal accent signature */
+    line-height: 1;
+    z-index: 1;
+    user-select: none;
+}
+
+.editorial-review-window {
+    position: relative;
+    z-index: 2;
+    min-height: 220px; /* Prevents layout shifting when content swaps */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stars-badge {
+    color: #f08d35;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.editorial-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: #0c6d84;
+    line-height: 1.4;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.editorial-author {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 0.95rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
+
+/* Minimalist Navigation Alignment Under Quote */
+.editorial-nav-controls {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 24px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 3;
 }
 
-.review-card {
-    background: white;
-    width: 70%;
-    padding: 60px;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-}
-
-.stars {
-    font-size: 2rem;
-    color: #f5a623;
-    margin-bottom: 20px;
-}
-
-.review-card p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-}
-
-.arrow {
-    border: none;
+.editorial-arrow {
     background: transparent;
-    font-size: 3rem;
+    border: none;
+    font-size: 1.2rem;
+    color: #0c6d84;
     cursor: pointer;
+    padding: 10px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.editorial-arrow:hover {
     color: #f08d35;
-    transition: 0.3s;
+    transform: scale(1.15);
 }
 
-.arrow:hover {
-    transform: scale(1.2);
-}
-
-.dots {
+.editorial-dots {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
+    gap: 8px;
+    align-items: center;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
+.edit-dot {
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: #ccc;
+    background-color: #e0e0e0;
+    transition: all 0.3s ease;
 }
 
-.dot.active {
-    background: #f08d35;
+.edit-dot.active {
+    background-color: #0c6d84;
+    transform: scale(1.3);
+}
+
+/* Quick utility class for the JavaScript fade animation transition */
+.review-fade-out {
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+/* Responsive adjustment for clean reading on mobile viewports */
+@media (max-width: 768px) {
+    .editorial-quote {
+        font-size: 1.6rem;
+    }
+    .decorative-quote-mark {
+        font-size: 9rem;
+        top: -10px;
+    }
 }
 
 /* ================= CONTACT OVERLAY PANEL ================= */
