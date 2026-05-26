@@ -784,42 +784,35 @@ nav a:hover {
         transition: none;
     }
 }
+/* 1. The main container layout */
 .about-container {
-    display: flex; /* Aligns image column next to text column */
+    display: flex;
     align-items: flex-start;
     gap: 30px;
 }
 
+/* 2. The column holding both images */
 .image-column {
     display: flex;
-    flex-direction: column; /* This forces them to stack vertically */
-    gap: 15px;
-    width: 200px; /* Adjust this to make the images smaller/larger */
-    flex-shrink: 0; /* Prevents the images from squishing */
+    flex-direction: column;
+    gap: 15px; 
+    width: 300px; /* Adjust this width to make both images the size you want */
+    flex-shrink: 0;
 }
 
+/* 3. The boxes holding the images */
 .dentist-photo-box, 
 .certificate-photo-box {
     width: 100%;
     overflow: hidden;
-    border-radius: 8px; /* Optional, for cleaner edges */
-    line-height: 0;
-    padding: 0;
+    border-radius: 8px; /* This rounds the corners */
+    line-height: 0; /* Removes potential inline gap */
 }
 
-.dentist-photo-box {
-    height: 200px; /* Change this value to make it smaller or larger */
-}
-
-.certificate-photo-box {
-    height: 300px; /* Change this to whatever height you want the certificates to be */
-}
-
-/* Ensure the images themselves fill the rounded containers */
+/* 4. The images themselves */
 .dentist-photo-box img, 
 .certificate-photo-box img {
     width: 100%;
+    height: auto; /* This prevents stretching/cropping and removes white space */
     display: block;
-    object-fit: cover;
-    height: 80%;
 }
