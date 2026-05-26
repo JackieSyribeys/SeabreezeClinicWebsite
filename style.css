@@ -805,6 +805,7 @@ nav a:hover {
     overflow: hidden;
     border-radius: 8px; /* Optional, for cleaner edges */
     line-height: 0;
+    padding: 0;
 }
 
 /* Ensure the images themselves fill the rounded containers */
@@ -812,4 +813,5 @@ nav a:hover {
 .certificate-photo-box img {
     width: 100%;
     display: block;
+    vertical-align: bottom;
 }
