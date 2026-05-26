@@ -784,3 +784,33 @@ nav a:hover {
         transition: none;
     }
 }
+/* Container for the two stacked images */
+.dentist-visuals-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust spacing between the two images */
+    width: 40%; /* Adjust width to match your original layout */
+}
+
+/* Ensure images fill their containers */
+.dentist-photo-box, 
+.certificate-photo-box {
+    width: 100%;
+    flex: 1; /* Makes them share the available vertical space equally */
+    overflow: hidden;
+}
+
+.dentist-photo-box img, 
+.certificate-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps aspect ratio while filling the space */
+    border-radius: 8px; /* Optional: matches your existing styling */
+}
+
+/* Ensure the main container aligns items properly */
+.about-container {
+    display: flex;
+    align-items: stretch; /* Forces both columns to match height */
+    gap: 40px;
+}
