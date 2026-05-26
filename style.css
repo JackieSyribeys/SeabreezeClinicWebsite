@@ -784,29 +784,23 @@ nav a:hover {
         transition: none;
     }
 }
-/* Style for both image containers */
-.dentist-photo-box, 
-.certificate-photo-box {
-    width: 250px; /* Adjust this value to make them the exact size you want */
-    margin-bottom: 15px; /* Adds space between the two images */
+.about-container {
+    display: flex; /* Aligns image column next to text column */
+    align-items: flex-start;
+    gap: 30px;
 }
 
-/* Ensure the images stay inside their respective boxes */
+.image-column {
+    display: flex;
+    flex-direction: column; /* This forces them to stack vertically */
+    gap: 15px;
+    width: 300px; /* Adjust this to make the images smaller/larger */
+    flex-shrink: 0; /* Prevents the images from squishing */
+}
+
 .dentist-photo-box img, 
 .certificate-photo-box img {
     width: 100%;
-    height: auto;
     display: block;
-}
-
-/* Ensure the main container keeps the images on the left and the bio on the right */
-.about-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows the second image to drop below the first */
-    gap: 40px;
-}
-
-/* Target the images column specifically if needed */
-.dentist-photo-box, .certificate-photo-box {
-    flex: 0 0 250px; /* Prevents them from growing or shrinking */
+    border-radius: 8px; /* Optional, for cleaner edges */
 }
