@@ -784,32 +784,15 @@ nav a:hover {
         transition: none;
     }
 }
-/* Keeps the title on one line */
-.bio-title {
-    white-space: nowrap;
-}
-
-.dentist-visuals-wrapper {
+.dentist-photo-box {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 35%; /* Increased width so images aren't cramped */
+    gap: 15px; /* Adds space between the two images */
+    width: 100%; /* Keeps the images aligned with the column width */
 }
 
-.dentist-photo-box img, 
-.certificate-photo-box img {
-    width: 100%;
-    height: auto; /* Changed from 100% to auto to prevent cropping */
+.dentist-photo-box img {
+    width: 100%; /* Ensures they match the width of the box */
+    height: auto; /* This prevents the image from being cut in half */
     display: block;
-    object-fit: contain; /* Ensures the whole image is visible without cutting */
-}
-
-.about-container {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.dentist-bio-box {
-    width: 65%; /* Ensures the text box has plenty of room */
 }
