@@ -821,4 +821,5 @@ nav a:hover {
     width: 100%;
     display: block;
     object-fit: cover;
+    height: 100%;
 }
