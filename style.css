@@ -804,6 +804,7 @@ nav a:hover {
     background: #ffffff;
     overflow: hidden;
     border-radius: 8px; /* Optional, for cleaner edges */
+    line-height: 0;
 }
 
 /* Ensure the images themselves fill the rounded containers */
