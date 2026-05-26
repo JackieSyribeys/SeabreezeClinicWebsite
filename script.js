@@ -5,15 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviewsList = [
         {
             text: "Dr. Syribeys is an amazing Dentist. I have been going to him for over 11 years and would never consider going anywhere else.",
-            author: "— Sarah J."
+            author: "— Sue B."
         },
         {
-            text: "The office environment is so modern and peaceful. The team took the time to explain everything thoroughly and kept me entirely at ease.",
-            author: "— Michael K."
+            text: "Dr. Syribeys is the best dentist I have ever had in my life! He is excellent at everything he does, from his skill as a dentist to his 'chair-side' manner.",
+            author: "— Kathy S."
         },
         {
-            text: "Incredible attention to detail. From routine cleanings to advanced dental work, they consistently deliver premier, comfortable care.",
-            author: "— Amanda L."
+            text: "Love Seabreeze. The staff is great. Dr Syribes is great. I drive an hour to get to this office every time because I just can’t find a dentist I love as much.",
+            author: "— Candace G."
+        },
+        {
+            text: "The staff at Seabreeze Dental is absolutely the most professional, knowledgeable, and caring team. Dr. Syribeys's experience and expertise is unmatched. He has changed my perspective of dentistry.",
+            author: "— R. Love"
+        },
+        {
+            text: "I've gone to Dr. Syribeys for 20+ years, he's fabulous, and the practice is state of the art! My experiences have all been positive. I highly recommend both Dr. Syribeys and his practice.",
+            author: "— Jill B."
         }
     ];
 
