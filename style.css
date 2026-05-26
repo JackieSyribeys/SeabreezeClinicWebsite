@@ -794,7 +794,7 @@ nav a:hover {
     display: flex;
     flex-direction: column; /* This forces them to stack vertically */
     gap: 15px;
-    width: 200px; /* Adjust this to make the images smaller/larger */
+    width: 150px; /* Adjust this to make the images smaller/larger */
     flex-shrink: 0; /* Prevents the images from squishing */
 }
 
@@ -808,11 +808,11 @@ nav a:hover {
 }
 
 .dentist-photo-box {
-    height: 200px; /* Change this value to make it smaller or larger */
+    height: 150px; /* Change this value to make it smaller or larger */
 }
 
 .certificate-photo-box {
-    height: 300px; /* Change this to whatever height you want the certificates to be */
+    height: 200px; /* Change this to whatever height you want the certificates to be */
 }
 
 /* Ensure the images themselves fill the rounded containers */
