@@ -801,7 +801,6 @@ nav a:hover {
 .dentist-photo-box, 
 .certificate-photo-box {
     width: 100%;
-    background: #ffffff;
     overflow: hidden;
     border-radius: 8px; /* Optional, for cleaner edges */
     line-height: 0;
