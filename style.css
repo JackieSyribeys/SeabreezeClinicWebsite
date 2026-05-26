@@ -799,9 +799,18 @@ nav a:hover {
     border-radius: 8px;
 }
 
+.dentist-photo-box, 
+.certificate-photo-box {
+    width: 100%;
+    background: #ffffff;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Optional, for cleaner edges */
+}
+
+/* Ensure the images themselves fill the rounded containers */
 .dentist-photo-box img, 
 .certificate-photo-box img {
     width: 100%;
     display: block;
-    border-radius: 8px; /* Optional, for cleaner edges */
 }
