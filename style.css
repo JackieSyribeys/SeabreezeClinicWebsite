@@ -796,6 +796,7 @@ nav a:hover {
     gap: 15px;
     width: 300px; /* Adjust this to make the images smaller/larger */
     flex-shrink: 0; /* Prevents the images from squishing */
+    border-radius: 8px;
 }
 
 .dentist-photo-box img, 
