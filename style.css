@@ -795,30 +795,45 @@ nav a:hover {
 .image-column {
     display: flex;
     flex-direction: column;
-    gap: 15px; 
-    width: 300px; /* Adjust this width to make both images the size you want */
+    gap: 15px;
+    width: 300px;
     flex-shrink: 0;
 }
 
+/* 3. Text box */
 .dentist-bio-box {
     flex: 1;
 }
 
-/* 4. The images themselves */
-.dentist-photo-box img, 
-.certificate-photo-box img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
-
-/* 3. The boxes holding the images */
-.dentist-photo-box, 
+/* 4. Image boxes */
+.dentist-photo-box,
 .certificate-photo-box {
     width: 100%;
     overflow: hidden;
-    border-radius: 8px; /* This rounds the corners */
+    border-radius: 8px;
+}
+
+/* ONLY the top image gets fixed cropping */
+.dentist-photo-box {
+    height: 350px;
+}
+
+/* Images */
+.dentist-photo-box img,
+.certificate-photo-box img {
+    width: 100%;
+    display: block;
+}
+
+/* Crop only the dentist image */
+.dentist-photo-box img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Keep certificate natural */
+.certificate-photo-box img {
+    height: auto;
 }
 
 
