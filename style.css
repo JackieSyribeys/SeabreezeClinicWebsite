@@ -784,29 +784,35 @@ nav a:hover {
         transition: none;
     }
 }
-/* Container for the two stacked images */
+/* Reduce the width of the image column */
 .dentist-visuals-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 40%;
-    /* Added max-height to stop them from stretching too much */
-    max-height: 500px; 
+    gap: 15px;
+    width: 25%; /* Shrunk from 40% to 25% */
+    max-width: 300px; /* Limits absolute size on large screens */
 }
 
-/* Adjust the individual boxes to control the ratio */
+/* Make the individual image boxes smaller */
 .dentist-photo-box, 
 .certificate-photo-box {
     width: 100%;
-    /* Changed from flex: 1 to a specific height if you want them smaller */
-    height: 250px; 
+    height: 180px; /* Reduced from 250px to 180px */
     overflow: hidden;
     border-radius: 8px;
 }
 
+/* Ensure images fit the smaller boxes */
 .dentist-photo-box img, 
 .certificate-photo-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
+}
+
+/* Optional: Add a subtle transition if you want them to feel lighter */
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Changed from 'stretch' to keep images at their set size */
+    gap: 40px;
 }
