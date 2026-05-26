@@ -800,12 +800,8 @@ nav a:hover {
     flex-shrink: 0;
 }
 
-/* 3. The boxes holding the images */
-.dentist-photo-box, 
-.certificate-photo-box {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px; /* This rounds the corners */
+.dentist-bio-box {
+    flex: 1;
 }
 
 /* 4. The images themselves */
@@ -816,3 +812,13 @@ nav a:hover {
     object-fit: cover;
     display: block;
 }
+
+/* 3. The boxes holding the images */
+.dentist-photo-box, 
+.certificate-photo-box {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px; /* This rounds the corners */
+}
+
+
