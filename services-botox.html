@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthodontics Procedures | Seabreeze Dental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Seabreeze Dental Logo">
+            <div>
+                <h1>Seabreeze Dental</h1>
+                <p>General Dentistry</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="services-surgical.html">Surgical</a>
+                    <a href="services-restorative.html">Restorative</a>
+                    <a href="services-orthodontics.html" class="active-link">Orthodontics</a>
+                    <a href="services-hygiene.html">Hygiene</a>
+                    <a href="services-whitening.html">Whitening</a>
+                    <a href="services-botox.html" class="active-link">Botox</a>
+                </div>
+            </div>
+            <a href="index.html#reviews">Reviews</a>
+            <button class="contact-btn" id="contactBtn">Contact</button>
+        </nav>
+    </header>
+
+    <section class="service-detail-container">
+        <h2 class="service-page-title">Orthodontics</h2>
+        <div class="orange-line central-line"></div>
+        
+        <div class="service-items-wrapper">
+            
+            <div class="detailed-service-item reveal-left">
+                <div class="service-icon-container">
+                    <img src="images/fastbraces-icon.png" alt="Dental Crown Icon" class="service-page-icon">
+                </div>
+                <div class="service-text-block">
+                    <h3>Fastbraces</h3>
+                    <p>Fastbraces® utilize patented triangular bracket technology to move the crown and root of your teeth simultaneously, significantly reducing treatment time compared to traditional systems. This innovative approach allows many patients to achieve a beautifully straight, healthy smile in as little as 3 to 12 months, all with the same trusted results you expect from modern orthodontics.</p>
+                </div>
+            </div>
+
+            <div class="detailed-service-item reveal-right">
+                <div class="service-icon-container">
+                    <img src="images/clearaligners-icon.png" alt="Dental Bridge Icon" class="service-page-icon">
+                </div>
+                <div class="service-text-block">
+                    <h3>Clear Aligners</h3>
+                    <p>Clear aligners offer a virtually invisible, removable alternative to traditional braces, gently guiding your teeth into their ideal position with custom-fitted trays. Designed for maximum comfort and convenience, this discreet solution allows you to maintain your daily routine and oral hygiene with ease while achieving a confident, perfectly aligned smile.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="overlay" id="overlay" onclick="closeContactPanel()"></div>
+    <div class="contact-panel" id="contactPanel">
+        <button class="close-btn" onclick="closeContactPanel()">×</button>
+        <h2>Contact Us</h2>
+        <div class="panel-line"></div>
+        <div class="contact-info-block">
+            <h3>Phone</h3>
+            <p>(770) 393-4711</p>
+        </div>
+        <div class="contact-info-block">
+            <h3>Address</h3>
+            <p>8097 Roswell Road, Bldg. E<br>Atlanta, GA 30350</p>
+        </div>
+        <div class="contact-info-block">
+            <h3>Hours</h3>
+            <p>Monday – Thursday: 9AM – 6PM<br>Friday: 9AM – 1PM</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
