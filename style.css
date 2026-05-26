@@ -784,35 +784,32 @@ nav a:hover {
         transition: none;
     }
 }
-/* Reduce the width of the image column */
+/* Keeps the title on one line */
+.bio-title {
+    white-space: nowrap;
+}
+
 .dentist-visuals-wrapper {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 25%; /* Shrunk from 40% to 25% */
-    max-width: 300px; /* Limits absolute size on large screens */
+    width: 35%; /* Increased width so images aren't cramped */
 }
 
-/* Make the individual image boxes smaller */
-.dentist-photo-box, 
-.certificate-photo-box {
-    width: 100%;
-    height: 180px; /* Reduced from 250px to 180px */
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-/* Ensure images fit the smaller boxes */
 .dentist-photo-box img, 
 .certificate-photo-box img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* Changed from 100% to auto to prevent cropping */
+    display: block;
+    object-fit: contain; /* Ensures the whole image is visible without cutting */
 }
 
-/* Optional: Add a subtle transition if you want them to feel lighter */
 .about-container {
     display: flex;
-    align-items: flex-start; /* Changed from 'stretch' to keep images at their set size */
     gap: 40px;
+    align-items: flex-start;
+}
+
+.dentist-bio-box {
+    width: 65%; /* Ensures the text box has plenty of room */
 }
