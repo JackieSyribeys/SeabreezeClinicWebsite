@@ -806,13 +806,13 @@ nav a:hover {
     width: 100%;
     overflow: hidden;
     border-radius: 8px; /* This rounds the corners */
-    line-height: 0; /* Removes potential inline gap */
 }
 
 /* 4. The images themselves */
 .dentist-photo-box img, 
 .certificate-photo-box img {
     width: 100%;
-    height: auto; /* This prevents stretching/cropping and removes white space */
+    height: auto;
+    object-fit: cover;
     display: block;
 }
