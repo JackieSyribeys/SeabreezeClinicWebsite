@@ -811,6 +811,7 @@ nav a:hover {
 .dentist-photo-box img, 
 .certificate-photo-box img {
     width: 100%;
+    height: 100%;
     display: block;
-    vertical-align: bottom;
+    object-fit: cover;
 }
