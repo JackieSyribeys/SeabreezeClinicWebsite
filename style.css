@@ -784,6 +784,51 @@ nav a:hover {
         transition: none;
     }
 }
+/* ================= REPLACE THIS SECTION AT THE BOTTOM ================= */
 
+/* 1. Update your existing about-container definition with this: */
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 4%;
+    display: flex;
+    align-items: stretch; /* This aligns the image column and bio box height */
+    gap: 50px;
+}
 
+/* 2. Add these new rules below it: */
 
+.image-column {
+    display: flex;
+    flex-direction: column; /* This stacks the images vertically */
+    gap: 20px;
+    flex: 0 0 350px; /* Maintains your preferred image column width */
+}
+
+.dentist-photo-box {
+    width: 70%; /* Smaller dentist image */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.certificate-photo-box {
+    width: 100%; /* Larger certificate image */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Ensure images fill their respective boxes */
+.image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Keep your existing media query for mobile at the bottom: */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
