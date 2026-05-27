@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             author: "— Kathy S."
         },
         {
-            text: "Love Seabreeze. The staff is great. Dr Syribes is great. I drive an hour to get to this office every time because I just can’t find a dentist I love as much.",
+            text: "Love Seabreeze. The staff is great. Dr Syribeys is great. I drive an hour to get to this office every time because I just can’t find a dentist I love as much.",
             author: "— Candace G."
         },
         {
