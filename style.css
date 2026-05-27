@@ -784,56 +784,6 @@ nav a:hover {
         transition: none;
     }
 }
-/* 1. The main container layout */
-.about-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-}
 
-/* 2. The column holding both images */
-.image-column {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 300px;
-    flex-shrink: 0;
-}
-
-/* 3. Text box */
-.dentist-bio-box {
-    flex: 1;
-}
-
-/* 4. Image boxes */
-.dentist-photo-box,
-.certificate-photo-box {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-/* ONLY the top image gets fixed cropping */
-.dentist-photo-box {
-    height: 200px;
-}
-
-/* Images */
-.dentist-photo-box img,
-.certificate-photo-box img {
-    width: 100%;
-    display: block;
-}
-
-/* Crop only the dentist image */
-.dentist-photo-box img {
-    height: auto;
-    object-fit: cover;
-}
-
-/* Keep certificate natural */
-.certificate-photo-box img {
-    height: auto;
-}
 
 
