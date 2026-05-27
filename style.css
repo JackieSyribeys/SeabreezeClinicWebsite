@@ -475,6 +475,25 @@ nav a:hover {
     margin-bottom: 0;
 }
 
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.certificate-photo-box {
+    width: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.certificate-photo-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Responsive adjustment if screens become narrow */
 @media (max-width: 768px) {
     .about-container {
