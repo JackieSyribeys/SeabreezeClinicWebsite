@@ -427,6 +427,9 @@ nav a:hover {
     gap: 20px; /* Space between the two images */
     flex: 0 0 350px;
 }
+.image-column img {
+    display: block;
+}
 
 /* Smaller profile element setting image to roughly 1/3 layout space width */
 .dentist-photo-box {
