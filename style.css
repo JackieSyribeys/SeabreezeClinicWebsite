@@ -421,12 +421,6 @@ nav a:hover {
     align-items: flex-start; /* Keeps items cleanly aligned at the top */
     gap: 50px;
 }
-.image-column {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 350px;
-    gap: 0;
-}
 
 /* Smaller profile element setting image to roughly 1/3 layout space width */
 .dentist-photo-box {
@@ -442,12 +436,6 @@ nav a:hover {
     object-fit: cover;
 }
 
-.certificate-photo-box {
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
 
 /* Faded blue box design for the biographical copy details */
 .dentist-bio-box {
