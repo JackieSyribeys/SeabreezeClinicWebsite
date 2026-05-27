@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPerio Care | Seabreeze Dental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Seabreeze Dental Logo">
+            <div>
+                <h1>Seabreeze Dental</h1>
+                <p>Comprehensive Dental Care</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="services-surgical.html">Surgical</a>
+                    <a href="services-restorative.html">Restorative</a>
+                    <a href="services-orthodontics.html">Orthodontics</a>
+                    <a href="services-hygiene.html">Hygiene</a>
+                    <a href="services-whitening.html">Whitening</a>
+                    <a href="services-botox.html">Botox</a>
+                    <a href="services-perio.html" class="active-link">Periodontal Care</a>
+                </div>
+            </div>
+            <a href="index.html#reviews">Reviews</a>
+            <button class="contact-btn" id="contactBtn">Contact</button>
+        </nav>
+    </header>
+
+    <!-- ================= SERVICE CONTENT SECTION ================= -->
+    <section class="service-detail-container">
+        <h2 class="service-page-title">Non-Surgical Periodontal Therapy</h2>
+        <div class="orange-line central-line"></div>
+        
+        <div class="service-items-wrapper">
+            
+            <div class="detailed-service-item reveal-left">
+                <div class="service-icon-container">
+                    <img src="images/perio.png" alt="Dental Crown Icon" class="service-page-icon">
+                </div>
+                <div class="service-text-block">
+                    <h3>Periodontal Maintenance</h3>
+                    <p>Patients with gum disease must be placed under periodontal maintenance, which is an increased frequency of cleanings (every 3-4 months). This allows us to properly monitor your gum health and control the progression of gum disease.</p>
+                </div>
+            </div>
+          
+            <div class="detailed-service-item reveal-right">
+                <div class="service-icon-container">
+                    <img src="images/SRP.png" alt="Dental Bridge Icon" class="service-page-icon">
+                </div>
+                <div class="service-text-block">
+                    <h3>Deep Cleaning SRP (Scaling & Root Planing)</h3>
+                    <p>This thorough cleaning is for patients with early or moderate gum disease (gingivitis or periodontitis). The hygienist cleans below the gumline to remove bacteria from the tooth roots and smooth the root surfaces, helping the gums reattach to the teeth.</p>
+                </div>
+            </div>
+
+            <div class="detailed-service-item reveal-right">
+                <div class="service-icon-container">
+                    <img src="images/arestin.png" alt="Dental Bridge Icon" class="service-page-icon">
+                </div>
+                <div class="service-text-block">
+                    <h3>Arestin</h3>
+                    <p>Arestin is a locally administered, controlled-release antibiotic (minocycline hydrochloride) that is placed directly into infected periodontal pockets after a deep cleaning procedure. It helps fight the bacteria responsible for gum disease.</p>
+                </div>
+            </div>
+
+          <div class="detailed-service-item reveal-right">
+                <div class="service-icon-container">
+                    <img src="images/laser.png" alt="Dental Bridge Icon" class="service-page-icon">
+                </div>
+                <div class="service-text-block">
+                    <h3>Laser Treatment</h3>
+                    <p>Laser periodontal therapy is a minimally invasive treatment that uses concentrated light energy to precisely target and remove infected gum tissue and bacteria from periodontal pockets. By vaporizing diseased areas while leaving healthy tissue intact, the laser helps sterilize the site, reduce inflammation, and stimulate the body’s natural healing processes, including tissue regeneration and bone reattachment. Compared to traditional surgical methods, it typically results in less pain, reduced bleeding, and a significantly faster recovery time.</p>
+                </div>
+            </div>
+
+          <div class="detailed-service-item reveal-right">
+                <div class="service-icon-container">
+                    <img src="images/periotray.png" alt="Dental Bridge Icon" class="service-page-icon">
+                </div>
+                <div class="service-text-block">
+                    <h3>Periotrays</h3>
+                    <p>Perio Trays are custom-fitted, prescription dental trays designed to deliver antimicrobial medication directly into the periodontal pockets to treat and control gum disease. By creating a seal that forces the medicine below the gumline, they effectively manage bacterial growth at home, helping to reduce inflammation, bleeding, and pocket depths.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= CONTACT PANEL ================= -->
+    <div class="overlay" id="overlay" onclick="closeContactPanel()"></div>
+    <div class="contact-panel" id="contactPanel">
+        <button class="close-btn" onclick="closeContactPanel()">×</button>
+        <h2>Contact Us</h2>
+        <div class="panel-line"></div>
+        <div class="contact-info-block">
+            <h3>Phone</h3>
+            <p>(770) 393-4711</p>
+        </div>
+        <div class="contact-info-block">
+            <h3>Address</h3>
+            <p>8097 Roswell Road, Bldg. E<br>Atlanta, GA 30350</p>
+        </div>
+        <div class="contact-info-block">
+            <h3>Hours</h3>
+            <p>Monday – Thursday: 9AM – 6PM<br>Friday: 9AM – 1PM</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
