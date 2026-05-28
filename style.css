@@ -804,6 +804,7 @@ nav a:hover {
 .about-section {
     position: relative; /* This makes the SVG anchor to this section */
     width: 100%;
+    overflow-x: hidden;
 }
 
 .background-lines {
