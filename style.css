@@ -800,3 +800,24 @@ nav a:hover {
         transition: none;
     }
 }
+
+.about-section {
+    position: relative; /* This makes the SVG anchor to this section */
+    width: 100%;
+}
+
+.background-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Pushes lines behind your content */
+    pointer-events: none; /* Keeps the page clickable */
+}
+
+/* Ensure your container sits in front */
+.about-container {
+    position: relative;
+    z-index: 1;
+}
