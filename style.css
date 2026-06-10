@@ -687,11 +687,17 @@ nav a:hover {
     color: #0c6d84;
 }
 
-.services-grid {
+.myServicesSwiper {
+    width: 100%;
+    max-width: 1200px; /* Optional: keeps it from getting too wide on huge screens */
+    margin: 0 auto;    /* Centers the carousel on the page */
+    padding: 20px 0;   /* Adds breathing room */
+}
+
+/* This styles the cards inside the slider */
+.swiper-slide {
     display: flex;
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 30px;
+    justify-content: center;
 }
 
 .service-card {
