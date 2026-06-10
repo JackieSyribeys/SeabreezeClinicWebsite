@@ -821,3 +821,13 @@ nav a:hover {
     position: relative;
     z-index: 1;
 }
+
+.map-section {
+    width: 100%;
+    padding: 0; /* Remove padding if your container has any */
+}
+
+.map-section iframe {
+    display: block; /* Removes tiny extra space below the iframe */
+    width: 100%;    /* Forces the map to the full width of the section */
+}
