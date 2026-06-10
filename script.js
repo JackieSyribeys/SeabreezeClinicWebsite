@@ -129,3 +129,23 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(item);
     });
 });
+
+// Add this to your script.js file
+const swiper = new Swiper('.myServicesSwiper', {
+  loop: true,
+  slidesPerView: 3,
+  centeredSlides: true,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1
+    },
+    1024: {
+      slidesPerView: 3
+    }
+  }
+});
