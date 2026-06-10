@@ -688,10 +688,8 @@ nav a:hover {
 }
 
 .myServicesSwiper {
-    width: 100%;
-    max-width: 1200px; /* Optional: keeps it from getting too wide on huge screens */
-    margin: 0 auto;    /* Centers the carousel on the page */
-    padding: 20px 0;   /* Adds breathing room */
+    padding-bottom: 60px; 
+    position: relative;
 }
 
 /* This styles the cards inside the slider */
@@ -725,7 +723,7 @@ nav a:hover {
 
 /* The structural lift effect on hover */
 .service-card:hover {
-    transform: translateY(-8px);
+    transform: scale(1.1) translateY(-8px);
     box-shadow: 0 15px 35px rgba(12, 109, 132, 0.08);
 }
 
