@@ -831,3 +831,8 @@ nav a:hover {
     display: block; /* Removes tiny extra space below the iframe */
     width: 100%;    /* Forces the map to the full width of the section */
 }
+
+.home-services-section {
+    padding: 80px 4%;
+    text-align: center;
+}
