@@ -884,4 +884,13 @@ nav a:hover {
 .map-text-section {
     text-align: center;
     padding: 60px 20px; /* Adjust as needed */
+    margin-bottom: 0;
+}
+
+.map-text-section .orange-line {
+    margin-bottom: 0;
+}
+
+.map-text-section h2 {
+    margin-bottom: 0;
 }
