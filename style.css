@@ -686,6 +686,10 @@ nav a:hover {
     z-index: 10;
 }
 
+.hero2-section2 p {
+    color: #777;
+}
+
 /* ================= SERVICE SNAPSHOT GRID STYLING ================= */
 .home-services-section {
     background: #f7fbfb;
