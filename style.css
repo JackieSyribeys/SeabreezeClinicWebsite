@@ -681,17 +681,17 @@ nav a:hover {
     margin: 40px auto 80px;
     padding: 0 4%;
     gap: 40px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 10;
 }
 
 .hero2-section2 p {
-    color: #777;
+    color: #D3D3D3;
 }
 
 .hero2-section2 h2 {
-    color: #777;
+    color: #D3D3D3;
 }
 
 /* ================= SERVICE SNAPSHOT GRID STYLING ================= */
