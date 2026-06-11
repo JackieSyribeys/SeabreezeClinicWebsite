@@ -677,7 +677,7 @@ nav a:hover {
 .hero-section2 {
     background-color: #FFDAB9;
     display: flex;
-    max-width: 1200px;
+    width: 100%;
     margin: 40px auto 80px;
     padding: 0 4%;
     gap: 40px;
