@@ -674,6 +674,16 @@ nav a:hover {
     object-fit: cover;
 }
 
+.hero-section2 {
+    background-color: #f08d35;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto 80px;
+    padding: 0 4%;
+    gap: 40px;
+}
+
 /* ================= SERVICE SNAPSHOT GRID STYLING ================= */
 .home-services-section {
     background: #f7fbfb;
