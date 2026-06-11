@@ -681,7 +681,7 @@ nav a:hover {
     margin: 40px auto 80px;
     padding: 0 4%;
     gap: 40px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 -10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 -20px 40px rgba(0, 0, 0, 0.35);
     position: relative;
     z-index: 10;
 }
