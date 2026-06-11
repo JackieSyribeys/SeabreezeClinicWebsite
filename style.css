@@ -877,10 +877,6 @@ nav a:hover {
     width: 100%;    /* Forces the map to the full width of the section */
 }
 
-.map-section {
-    padding: 80px 4%;
-}
-
 .map-content h2 {
     padding: 80px 4%;
     text-align: center;
