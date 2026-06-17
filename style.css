@@ -1119,10 +1119,11 @@ nav a:hover {
 .section-divider {
     width: 85%;
     max-width: 1400px;
-    height: 5px;
+    height: 3px;
     background: #f7941d;
     margin: 70px auto;
     border-radius: 999px;
+    box-shadow: 0 0 8px rgba(247, 148, 29, 0.25);
 }
 
 .bottom-gradient {
