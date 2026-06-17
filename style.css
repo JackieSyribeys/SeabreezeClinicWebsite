@@ -1127,6 +1127,7 @@ nav a:hover {
 
 body::after {
     content: "";
+    position: fixed;
     bottom: 0;
     left: 0;
 
@@ -1137,10 +1138,10 @@ body::after {
 
     /* This is the key: it fades INTO white first, THEN introduces orange */
     background: linear-gradient(
-        to bottom,
+        to top,
         #ffffff 0%,
-        rgba(255, 255, 255, 0.6) 25%,
+        rgba(247, 148, 29, 0.22) 25%,
         rgba(247, 148, 29, 0.10) 60%,
-        rgba(247, 148, 29, 0.22) 100%
+        rgba(255, 255, 255, 0.6) 100%
     );
 }
