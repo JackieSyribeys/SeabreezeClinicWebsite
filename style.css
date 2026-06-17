@@ -159,7 +159,7 @@ nav a:hover {
 /* ================= GALLERY (HORIZONTAL ROW) ================= */
 .gallery {
     width: 100%;
-    padding: 60px 7%;
+    padding: 50px 7%;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 images lined up horizontally */
     gap: 24px;
