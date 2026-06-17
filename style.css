@@ -1137,7 +1137,7 @@ body::after {
 
     /* This is the key: it fades INTO white first, THEN introduces orange */
     background: linear-gradient(
-        to top,
+        to bottom,
         #ffffff 0%,
         rgba(255, 255, 255, 0.6) 25%,
         rgba(247, 148, 29, 0.10) 60%,
