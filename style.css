@@ -1127,7 +1127,6 @@ nav a:hover {
 
 body::after {
     content: "";
-    position: fixed;
     bottom: 0;
     left: 0;
 
