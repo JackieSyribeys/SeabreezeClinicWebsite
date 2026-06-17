@@ -898,3 +898,215 @@ nav a:hover {
 .map-text-section h2 {
     margin-bottom: 0;
 }
+
+/* ==========================
+   Insurance Section
+========================== */
+
+.insurance-wrapper {
+    max-width: 1300px;
+    margin: 100px auto;
+    padding: 0 4%;
+
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+/* Shared Card Styles */
+
+.payment-card,
+.insurance-card {
+    background: linear-gradient(145deg, #ffffff, #fafafa);
+
+    border: 3px solid #f7941d;
+    border-radius: 22px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.12),
+        0 0 30px rgba(247,148,29,.18);
+
+    transition: all .35s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-card:hover,
+.insurance-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 35px 60px rgba(0,0,0,.18),
+        0 0 40px rgba(247,148,29,.35);
+}
+
+/* Left Card */
+
+.payment-card {
+    flex: 1.5;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-card h2 {
+    font-size: 2rem;
+    color: #0c6d84;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.payment-card h2::before {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 6px;
+
+    background: #f7941d;
+
+    border-radius: 20px;
+
+    margin-bottom: 18px;
+}
+
+.payment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 45px;
+}
+
+.payment-list li {
+    font-size: 1.15rem;
+    color: #444;
+
+    margin-bottom: 18px;
+
+    position: relative;
+
+    padding-left: 28px;
+}
+
+.payment-list li::before {
+    content: "✓";
+
+    color: #f7941d;
+
+    font-weight: bold;
+
+    position: absolute;
+    left: 0;
+}
+
+/* Button */
+
+.insurance-guide-btn {
+    align-self: flex-start;
+
+    margin-top: auto;
+
+    padding: 16px 32px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(135deg, #ffb347, #f7941d);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    letter-spacing: .4px;
+
+    transition: .3s;
+}
+
+.insurance-guide-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 20px rgba(247,148,29,.35);
+}
+
+/* Right Card */
+
+.insurance-card {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.insurance-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: -70px;
+    right: -70px;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(247,148,29,.12);
+
+    border-radius: 50%;
+}
+
+.insurance-icon {
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.insurance-card h2 {
+    font-size: 2.3rem;
+
+    color: #0c6d84;
+
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+
+    position: relative;
+    z-index: 2;
+}
+
+.insurance-card p {
+    color: #555;
+
+    font-size: 1.08rem;
+
+    line-height: 1.8;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .insurance-wrapper {
+        flex-direction: column;
+    }
+
+    .payment-card,
+    .insurance-card {
+        padding: 35px;
+    }
+
+    .payment-card h2,
+    .insurance-card h2 {
+        font-size: 1.8rem;
+    }
+
+}
