@@ -1125,7 +1125,7 @@ nav a:hover {
     border-radius: 999px;
 }
 
-body::after {
+.bottom-gradient {
     content: "";
     position: fixed;
     bottom: 0;
