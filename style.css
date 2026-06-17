@@ -1115,3 +1115,12 @@ nav a:hover {
     }
 
 }
+
+.section-divider {
+    width: 85%;
+    max-width: 1400px;
+    height: 5px;
+    background: #f7941d;
+    margin: 70px auto;
+    border-radius: 999px;
+}
