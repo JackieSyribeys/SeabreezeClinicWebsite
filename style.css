@@ -1125,6 +1125,10 @@ nav a:hover {
     border-radius: 999px;
 }
 
+.page-end {
+    margin-top: auto;
+}
+
 .bottom-gradient {
     content: "";
     position: fixed;
