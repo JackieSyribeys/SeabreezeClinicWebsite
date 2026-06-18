@@ -900,6 +900,31 @@ nav a:hover {
     color: white;
 }
 
+.hygiene-card {
+    background-image: url("images/shutterstock_2055434792.jpg");
+}
+
+.hygiene-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.30) 45%,
+        rgba(0,0,0,0)
+    );
+}
+
+.hygiene-card h3,
+.hygiene-card p,
+.hygiene-card .card-link-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
 /* The structural lift effect on hover */
 .service-card:hover {
     transform: scale(1.1) translateY(-8px);
