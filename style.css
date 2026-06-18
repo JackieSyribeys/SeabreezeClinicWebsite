@@ -938,6 +938,7 @@ nav a:hover {
 .service-card:hover {
     transform: scale(1.1) translateY(-8px);
     box-shadow: 0 15px 35px rgba(12, 109, 132, 0.08);
+    z-index: 10;
 }
 
 .card-icon {
