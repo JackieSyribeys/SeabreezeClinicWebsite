@@ -728,6 +728,10 @@ nav a:hover {
     color: #0c6d84;
 }
 
+.service-card p {
+    color: #fff;
+}
+
 .myServicesSwiper {
     padding-bottom: 90px; 
     position: relative;
