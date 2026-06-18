@@ -764,7 +764,7 @@ nav a:hover {
     padding: 40px 30px;
 
     border-radius: 16px;
-    overflow: visible;       /* NEW */
+    overflow: hidden;       /* NEW */
 
     text-decoration: none;
     color: white;           /* NEW */
