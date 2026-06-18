@@ -622,7 +622,7 @@ nav a:hover {
 .hero-content h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3.5rem;
-    color: #FDFCF9;
+    color: #0c6d84;
     line-height: 1.15;
     margin-bottom: 20px;
 }
@@ -630,7 +630,7 @@ nav a:hover {
 .hero-content p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #555;
+    color: #FDFCF9;
     margin-bottom: 30px;
 }
 
