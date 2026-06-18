@@ -800,6 +800,31 @@ nav a:hover {
     color: white;
 }
 
+.ortho-card {
+    background-image: url("images/shutterstock_2072022608.jpg");
+}
+
+.ortho-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.30) 45%,
+        rgba(0,0,0,0)
+    );
+}
+
+.ortho-card h3,
+.ortho-card p,
+.ortho-card .card-link-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
 /* The structural lift effect on hover */
 .service-card:hover {
     transform: scale(1.1) translateY(-8px);
