@@ -749,16 +749,55 @@ nav a:hover {
 
 .service-card {
     flex: 1;
-    background: white;
+    position: relative;
+
+    height: 520px;          /* NEW */
     padding: 40px 30px;
+
     border-radius: 16px;
+    overflow: hidden;       /* NEW */
+
     text-decoration: none;
-    color: inherit;
+    color: white;           /* NEW */
+
+    background: white;
+    background-size: cover;         /* NEW */
+    background-position: center;    /* NEW */
+    background-repeat: no-repeat;   /* NEW */
+
     box-shadow: 0 4px 20px rgba(0,0,0,0.02);
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+
     text-align: left;
+
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;      /* NEW */
+}
+
+.whitening-card {
+    background-image: url("images/shutterstock_2181965171.jpg");
+}
+
+.whitening-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.30) 45%,
+        rgba(0,0,0,0)
+    );
+}
+
+.whitening-card h3,
+.whitening-card p,
+.whitening-card .card-link-text {
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
 /* The structural lift effect on hover */
