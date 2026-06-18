@@ -163,12 +163,12 @@ nav a:hover {
     padding: 50px 7%;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 images lined up horizontally */
-    gap: 24px;
+    gap: 35px;
 }
 
 .gallery img {
     border-radius: 18px;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     transition: 0.3s;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
