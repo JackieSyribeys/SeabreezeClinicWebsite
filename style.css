@@ -824,7 +824,7 @@ nav a:hover {
 
 .ortho-card {
     background-image: url("images/shutterstock_2072022608.jpg");
-    background-position: 70% center;
+    background-position: 30% center;
 }
 
 .ortho-card::before {
