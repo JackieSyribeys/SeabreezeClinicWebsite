@@ -1103,6 +1103,12 @@ nav a:hover {
     margin-bottom: 0;
 }
 
+.dentist-bio p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 10px;
+}
+
 .location-about-section {
     max-width: 1400px;
     margin: 80px auto;
