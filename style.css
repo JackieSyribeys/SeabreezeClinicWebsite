@@ -1096,7 +1096,7 @@ nav a:hover {
 .map-text-section {
     text-align: left;
     padding: 0 0 25px 0; /* Adjust as needed */
-    margin-bottom: 0;
+    margin-bottom: 25px;
 }
 
 .map-text-section h2 {
@@ -1119,12 +1119,6 @@ nav a:hover {
 }
 
 /* Titles */
-
-.map-text-section,
-.meet-text-section {
-    margin-bottom: 25px;
-}
-
 .map-text-section .orange-line {
     width: 70px;
     height: 4px;
