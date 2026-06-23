@@ -1094,7 +1094,7 @@ nav a:hover {
 }
 
 .map-text-section {
-    text-align: left;
+    text-align: center;
     padding: 0 0 25px 0; /* Adjust as needed */
     margin-bottom: 25px;
 }
@@ -1123,7 +1123,7 @@ nav a:hover {
     width: 70px;
     height: 4px;
     background: #f28c28;
-    margin-top: 12px;
+    margin-top: 12px auto 0;
 }
 
 /* Map */
