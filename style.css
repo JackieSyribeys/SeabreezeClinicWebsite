@@ -772,7 +772,12 @@ nav a:hover {
     right: calc(50% - 60px);
 }
 
+.swiper-wrapper {
+    will-change: transform;
+}
+
 .service-card {
+    will-change: transform;
     flex: 1;
     position: relative;
 
