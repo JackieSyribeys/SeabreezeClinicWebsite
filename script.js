@@ -136,6 +136,7 @@ const swiper = new Swiper('.myServicesSwiper', {
   slidesPerView: 3,
   centeredSlides: true,
   spaceBetween: 30,
+  speed: 800,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
