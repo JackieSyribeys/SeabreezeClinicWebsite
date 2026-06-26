@@ -1425,7 +1425,7 @@ nav a:hover {
     text-align: center;
 }
 
-.hero-content {
+.insurance-hero-content {
     max-width: 900px;
     margin: auto;
 }
@@ -1437,7 +1437,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.hero-subtitle {
+.insurance-hero-subtitle {
     font-size: 1.35rem;
     color: #F58220;
     font-weight: 600;
@@ -1468,7 +1468,7 @@ nav a:hover {
     font-family: 'Cormorant Garamond', serif;
 }
 
-.info-card {
+.insurance-info-card {
     max-width: 900px;
     margin: auto;
     background: white;
@@ -1477,14 +1477,14 @@ nav a:hover {
     box-shadow: 0 15px 40px rgba(0,0,0,.08);
 }
 
-.info-card h2 {
+.insurance-info-card h2 {
     color: #0A5D7A;
     margin-bottom: 25px;
     font-size: 2.3rem;
     font-family: 'Cormorant Garamond', serif;
 }
 
-.info-card p {
+.insurance-info-card p {
     line-height: 1.9;
     margin-bottom: 18px;
 }
@@ -1496,22 +1496,22 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-.text-content {
+.insurance-text-content {
     flex: 1;
 }
 
-.icon-area {
+.insurance-icon-area {
     flex: .4;
     text-align: center;
 }
 
-.icon-area i {
+.insurance-icon-area i {
     font-size: 9rem;
     color: #F58220;
     opacity: .85;
 }
 
-.highlight-box {
+.insurance-highlight-box {
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -1529,13 +1529,13 @@ nav a:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
-.highlight-box i {
+.insurance-highlight-box i {
     color: #32b35d;
     font-size: 1.5rem;
     margin-top: 3px;
 }
 
-.table-wrapper {
+.insurance-table-wrapper {
     overflow-x: auto;
 }
 
@@ -1726,15 +1726,15 @@ tbody tr:hover {
         flex-direction: column;
     }
 
-    .icon-area {
+    .insurance-icon-area {
         order: -1;
     }
 
-    .icon-area i {
+    .insurance-icon-area i {
         font-size: 6rem;
     }
 
-    .info-card {
+    .insurance-info-card {
         padding: 35px;
     }
 }
